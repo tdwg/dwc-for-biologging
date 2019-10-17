@@ -1,0 +1,157 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+         packageId="move.588" system="https://www.datarepository.movebank.org" scope="system"
+         xml:lang="eng">
+<dataset>
+  <alternateIdentifier>https://doi.org/10.5441/001/1.7d8301h2</alternateIdentifier>
+  <title xml:lang="eng">Cougar and coyote GPS telemetry, Utah/Idaho USA (OBIS-ENV-DATA example)</title>
+      <creator>
+    <individualName>
+        <givenName>Peter J.</givenName>
+      <surName>Mahoney</surName>
+    </individualName>
+    <organizationName>University of Washington</organizationName>
+    <positionName>Postdoctoral Researcher</positionName>
+    <address>
+        <city>Seattle</city>
+        <administrativeArea>Washington</administrativeArea>
+        <country>USA</country>
+    </address>
+      </creator>
+      <creator>
+    <individualName>
+        <givenName>Michael</givenName>
+      <surName>Ebinger</surName>
+    </individualName>
+      </creator>
+      <creator>
+    <individualName>
+        <givenName>Michael</givenName>
+      <surName>Jaeger</surName>
+    </individualName>
+      </creator>
+      <creator>
+    <individualName>
+        <givenName>John A.</givenName>
+      <surName>Shivik</surName>
+    </individualName>
+      </creator>
+      <creator>
+    <individualName>
+        <givenName>Julie K.</givenName>
+      <surName>Young</surName>
+    </individualName>
+    <organizationName>Utah State University</organizationName>
+    <positionName>Associate Professor</positionName>
+    <address>
+        <city>Logan</city>
+        <administrativeArea>Utah</administrativeArea>
+        <country>USA</country>
+    </address>
+      </creator>
+      <metadataProvider>
+    <individualName>
+        <givenName>Sarah C.</givenName>
+      <surName>Davidson</surName>
+    </individualName>
+    <organizationName>Max Planck Institute of Animal Behavior</organizationName>
+    <positionName>Data Curator</positionName>
+    <address>
+        <city>Radolfzell</city>
+        <administrativeArea>Baden-Württemberg</administrativeArea>
+        <country>DE</country>
+    </address>
+    <electronicMailAddress>sdavidson@ab.mpg.de</electronicMailAddress>
+      </metadataProvider>
+  <pubDate>
+      DRAFT-NOT-YET-AVAILABLE
+  </pubDate>
+  <language>eng</language>
+  <abstract>
+    <para>Telemetry data from on-animal sensors deployed on a coyote in Utah in 2004-2005 and a cougar in Idaho in 2014. GPS locations for the coyote were recorded during two separate deployments, 1 in summer and 1 in winter. The collar deployed on the cougar recorded GPS locations, temperature, and standard GPS quality attributes on the same fix schedule, and activity (2-d accelerometer) on a different fix schedule. This dataset represents a part of the dataset published in the Movebank Data Repository (http://dx.doi.org/10.5441/001/1.7d8301h2), reformatted here according to the OBIS-ENV-DATA format as a test use case for tracking data. Captures, recoveries, deployments and non-location measurements are stored as events; times and locations of captures, recoveries, and location fixes are stored as occurrences; and measured values of GPS quality attributes, acceleration, and temperature are stored in ExtendedMeasurementOrFact.</para>
+  </abstract>
+      <keywordSet>
+        <keyword>accelerometer</keyword>
+        <keyword>animal movement</keyword>  
+        <keyword>animal tracking</keyword>  
+        <keyword>Canis latrans</keyword>   
+        <keyword>cougar</keyword>  
+        <keyword>coyote</keyword>  
+        <keyword>denning</keyword>  
+        <keyword>GPS logger</keyword>  
+        <keyword>home range</keyword>  
+        <keyword>mountain lion</keyword>  
+        <keyword>puma</keyword>  
+        <keyword>Puma concolor</keyword>  
+        <keyword>site fidelity</keyword>  
+        <keyword>territoriality</keyword> 
+        <keywordThesaurus>n/a</keywordThesaurus>
+      </keywordSet>
+  <intellectualRights>
+    <para>This dataset should be used to evaluate potential for animal on-animal sensor data, in particular data stored in Movebank (movebank.org), to be described in the OBIS-ENV-DATA format. For use of the actual dataset please refer to the complete published dataset (http://dx.doi.org/10.5441/001/1.7d8301h2).</para>
+    <para>To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the <ulink url="http://creativecommons.org/publicdomain/zero/1.0/legalcode"><citetitle>Public Domain (CC0 1.0)</citetitle></ulink>. Users may copy, modify, distribute and use the work, including for commercial purposes, without restriction.</para>
+  </intellectualRights>
+  <coverage>
+      <geographicCoverage>
+          <geographicDescription>Geographic coverage includes Monroe Mountain, Fishlake National Forest, southern Utah (puma) and southern Idaho (coyote).</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-112.773</westBoundingCoordinate>
+          <eastBoundingCoordinate>-111.932</eastBoundingCoordinate>
+          <northBoundingCoordinate>43.849</northBoundingCoordinate>
+          <southBoundingCoordinate>38.230</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2004-12-27</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2014-11-05</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+      <taxonomicCoverage>
+        <taxonomicClassification>
+          <taxonRankName>species</taxonRankName>
+        <taxonRankValue>Canis latrans</taxonRankValue>
+        <commonName>coyote</commonName>
+      </taxonomicClassification>
+      <taxonomicClassification>
+          <taxonRankName>species</taxonRankName>
+        <taxonRankValue>Puma concolor</taxonRankValue>
+        <commonName>cougar</commonName>
+              </taxonomicClassification>
+          </taxonomicCoverage>
+  </coverage>
+  <maintenance>
+    <maintenanceUpdateFrequency>unknown</maintenanceUpdateFrequency>
+  </maintenance>
+  <contact>
+    <individualName>
+        <givenName>Sarah C.</givenName>
+      <surName>Davidson</surName>
+    </individualName>
+    <organizationName>Max Planck Institute of Animal Behavior</organizationName>
+    <positionName>Data Curator</positionName>
+    <address>
+        <city>Radolfzell</city>
+        <administrativeArea>Baden-Württemberg</administrativeArea>
+        <country>DE</country>
+    </address>
+    <electronicMailAddress>sdavidson@ab.mpg.de</electronicMailAddress>
+  </contact>
+</dataset>
+  <additionalMetadata>
+    <metadata>
+      <gbif>
+        <dateStamp>DRAFT-NOT-YET-AVAILABLE</dateStamp>
+           <hierarchyLevel>dataset</hierarchyLevel>
+            <citation identifier="https://doi.org/10.1111/2041-210X.12658">Mahoney PJ, Young JK (2016) Uncovering behavioural states from animal activity and site fidelity patterns. Methods in Ecology and Evolution 8(2): 174–183. https://doi.org/10.1111/2041-210X.12658</citation>
+            <citation identifier="https://doi.org/10.5441/001/1.7d8301h2">Mahoney PJ, Ebinger M, Jaeger M, Shivik JA, Young JK (2017) Data from: Uncovering behavioural states from animal activity and site fidelity patterns. Movebank Data Repository. https://doi.org/10.5441/001/1.7d8301h2</citation>
+      </gbif>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>
