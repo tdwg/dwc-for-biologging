@@ -11,8 +11,9 @@ This repository contains guidelines for expressing biologging data (e.g. acousti
 ## Using the Wiki to Map Your Biologging Dataset to Darwin Core
 
 * :notebook_with_decorative_cover: See the [Wiki](https://github.com/tdwg/dwc-for-biologging/wiki) section of this repository for [Data](https://github.com/tdwg/dwc-for-biologging/wiki/Data-guidelines) and [Metadata guidelines](https://github.com/tdwg/dwc-for-biologging/wiki/Metadata-guidelines) as well as use cases that may be organized in a similar way to the biologging dataset you're trying to map to Darwin Core.
-    *[Acoustic sensor enabled tracking of blue sharks](https://github.com/tdwg/dwc-for-biologging/wiki/Acoustic-sensor-enabled-tracking-of-blue-sharks)
-    *[Terrestrial mammal GPS and ACC data from Movebank](https://github.com/tdwg/dwc-for-biologging/wiki/Terrestrial-mammal-GPS-and-ACC-data-from-Movebank)
+    * [Acoustic sensor enabled tracking of blue sharks](https://github.com/tdwg/dwc-for-biologging/wiki/Acoustic-sensor-enabled-tracking-of-blue-sharks)
+    * [Terrestrial mammal GPS and ACC data from Movebank](https://github.com/tdwg/dwc-for-biologging/wiki/Terrestrial-mammal-GPS-and-ACC-data-from-Movebank)
+
 * :speech_balloon: If no example case matches closely with what you're trying to do, consider [opening an Issue](https://github.com/tdwg/dwc-for-biologging/issues) or contributing your work so far as a new example via a pull request (and a new Wiki entry).
 
 ## Contributing
