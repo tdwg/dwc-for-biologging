@@ -7,7 +7,8 @@ _LBBG_ZEEBRUGGE - Lesser black-backed gulls (Larus fuscus, Laridae) breeding at 
 
 Goal:
 
-1. Make the dataset a valid [Frictionless Tabular Data Package](https://specs.frictionlessdata.io/tabular-data-package/) by adding a `datapackage.json`. Since this is a work in progress, the file is currently added to this repository rather than it being part of the dataset
-2. Read the dataset using as a Data Package
-3. Write code/documentation to convert the dataset to Darwin Core. This conversion will be lossy, losing columns (e.g. deployment & tag fields) and rows (e.g. subsampling by hour), which is OK since the original data are available
-4. Save the converted data as a staging file (also a Data Package) that can be reviewed/indexed as Darwin Core by GBIF and others.
+1. Make the dataset a valid [Frictionless Tabular Data Package](https://specs.frictionlessdata.io/tabular-data-package/) by adding a `datapackage.json`. As long as this is a work in progress, the file will be added to this repository rather than it being part of the dataset.
+2. Read the dataset as a Data Package.
+3. Write code/documentation to convert the dataset to Darwin Core. This conversion will be lossy: losing columns (e.g. deployment & tag fields) and rows (e.g. subsampling by hour). The original data remains available on Zenodo.
+4. Save the converted data as a staging dataset that can be reviewed/indexed as Darwin Core by GBIF and others. This staging dataset will also be a Data Package.
+5. Review the conversion by members of the Machine Observation group and adapt where necessary.
