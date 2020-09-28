@@ -4,7 +4,7 @@
   "resources": [
     {
       "name": "reference-data",
-      "path": "HG_OOSTENDE-reference-data.csv",
+      "path": "https://zenodo.org/record/3968687/files/LBBG_ZEEBRUGGE-reference-data.csv",
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
@@ -181,7 +181,7 @@
     },
     {
       "name": "gps",
-      "path": "HG_OOSTENDE-gps-2013.csv.zip",
+      "path": "https://zenodo.org/record/3968687/files/LBBG_ZEEBRUGGE-gps-2013.csv.zip",
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
@@ -344,7 +344,7 @@
     },
     {
       "name": "acceleration",
-      "path": "HG_OOSTENDE-acceleration-2013.csv.zip",
+      "path": "https://zenodo.org/record/3968687/files/LBBG_ZEEBRUGGE-acceleration-2013.csv.zip",
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
