@@ -32,14 +32,14 @@
           {
             "name": "deploy-on-date",
             "type": "datetime",
-            "format": "default",
+            "format": "%Y-%m-%d %H:%M:%S.%f",
             "description": "The timestamp when the tag deployment started. Example: '2008-08-30 18:00:00.000'; Format: yyyy-MM-dd HH:mm:ss.SSS; Units: UTC or GPS time; Entity described: deployment",
             "title": "deploy on timestamp"
           },
           {
             "name": "deploy-off-date",
             "type": "datetime",
-            "format": "default",
+            "format": "%Y-%m-%d %H:%M:%S.%f",
             "title": "deploy off timestamp",
             "description": "The timestamp when the tag deployment ended. Example: '2009-10-01 12:00:00.000'; Format: yyyy-MM-dd HH:mm:ss.SSS; Units: UTC or GPS time; Entity described: deployment"
           },
@@ -213,7 +213,7 @@
           {
             "name": "timestamp",
             "type": "datetime",
-            "format": "default",
+            "format": "%Y-%m-%d %H:%M:%S.%f",
             "title": "timestamp",
             "description": "The date and time corresponding to a sensor measurement or an estimate derived from sensor measurements. Example: '2008-08-14 18:31:00.000'; Format: yyyy-MM-dd HH:mm:ss.SSS; Units: UTC or GPS time; Entity described: event"
           },
@@ -398,8 +398,8 @@
           },
           {
             "name": "timestamp",
-            "type": "integer",
-            "format": "default",
+            "type": "datetime",
+            "format": "%Y-%m-%d %H:%M:%S.%f",
             "description": "The date and time corresponding to a sensor measurement or an estimate derived from sensor measurements. Example: '2008-08-14 18:31:00.000'; Format: yyyy-MM-dd HH:mm:ss.SSS; Units: UTC or GPS time; Entity described: event",
             "title": "timestamp"
           },
@@ -427,7 +427,7 @@
           {
             "name": "start-timestamp",
             "type": "datetime",
-            "format": "default",
+            "format": "%Y-%m-%d %H:%M:%S.%f",
             "description": "The date and time when the sampling interval or burst began. Example: '2011-01-03 13:45:00.000'; Format: yyyy-MM-dd HH:mm:ss.SSS; Units: UTC or GPS time; Entity described: event",
             "title": "start timestamp"
           },
