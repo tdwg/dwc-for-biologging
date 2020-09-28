@@ -181,7 +181,14 @@
     },
     {
       "name": "gps",
-      "path": "https://zenodo.org/record/3968687/files/LBBG_ZEEBRUGGE-gps-2013.csv.zip",
+      "path": [
+        "https://zenodo.org/record/3968687/files/LBBG_ZEEBRUGGE-gps-2013.csv.zip",
+        "https://zenodo.org/record/3968687/files/LBBG_ZEEBRUGGE-gps-2014.csv.zip",
+        "https://zenodo.org/record/3968687/files/LBBG_ZEEBRUGGE-gps-2015.csv.zip",
+        "https://zenodo.org/record/3968687/files/LBBG_ZEEBRUGGE-gps-2016.csv.zip",
+        "https://zenodo.org/record/3968687/files/LBBG_ZEEBRUGGE-gps-2017.csv.zip",
+        "https://zenodo.org/record/3968687/files/LBBG_ZEEBRUGGE-gps-2018.csv.zip",
+      ],
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
@@ -344,7 +351,14 @@
     },
     {
       "name": "acceleration",
-      "path": "https://zenodo.org/record/3968687/files/LBBG_ZEEBRUGGE-acceleration-2013.csv.zip",
+      "path": [
+        "https://zenodo.org/record/3968687/files/LBBG_ZEEBRUGGE-acceleration-2013.csv.zip",
+        "https://zenodo.org/record/3968687/files/LBBG_ZEEBRUGGE-acceleration-2014.csv.zip",
+        "https://zenodo.org/record/3968687/files/LBBG_ZEEBRUGGE-acceleration-2015.csv.zip",
+        "https://zenodo.org/record/3968687/files/LBBG_ZEEBRUGGE-acceleration-2016.csv.zip",
+        "https://zenodo.org/record/3968687/files/LBBG_ZEEBRUGGE-acceleration-2017.csv.zip",
+        "https://zenodo.org/record/3968687/files/LBBG_ZEEBRUGGE-acceleration-2018.csv.zip"
+      ],
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
