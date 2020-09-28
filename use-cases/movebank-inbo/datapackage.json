@@ -1,35 +1,6 @@
 {
-  "name": "lbbg_zeebrugge",
   "id": "https://doi.org/10.5281/zenodo.3968687",
-  "title": "LBBG_ZEEBRUGGE - Lesser black-backed gulls (Larus fuscus, Laridae) breeding at the southern North Sea coast (Belgium and the Netherlands)",
-  "description": "LBBG_ZEEBRUGGE - Lesser black-backed gulls (Larus fuscus, Laridae) breeding at the southern North Sea coast (Belgium and the Netherlands) is a bird tracking dataset published by the Research Institute for Nature and Forest (INBO). It contains animal tracking data collected by the LifeWatch GPS tracking network for large birds (http://lifewatch.be/en/gps-tracking-network-large-birds) for the project/study LBBG_ZEEBRUGGE, using trackers developed by the University of Amsterdam Bird Tracking System (UvA-BiTS, http://www.uva-bits.nl). The study has been operational since 2013. In total 150 individuals of Lesser black-backed gull (Larus fuscus) have been tagged in or near their breeding area at the southern North Sea coast (Zeebrugge and Ostend in Belgium and Vlissingen in the Netherlands), mainly to study their habitat use and migration behaviour. Data from active or new trackers are periodically uploaded from the UvA-BiTS database to Movebank (see https://github.com/inbo/bird-tracking) and then Zenodo. An older version of this dataset has been described in Stienen et al. (2016, https://doi.org/10.3897/zookeys.555.6173).\n\nData in this package are exported from Movebank study LBBG_ZEEBRUGGE - Lesser black-backed gulls (Larus fuscus, Laridae) breeding at the southern North Sea coast (Belgium and the Netherlands) (Movebank Study ID 985143423), which can be viewed at https://www.movebank.org/cms/webapp?gwt_fragment=page=studies,path=study985143423. Attributes in the data files are defined in the README.txt, in the NERC Vocabulary Server at http://vocab.nerc.ac.uk/collection/MVB and in the Movebank Attribute Dictionary at www.movebank.org/node/2381.",
   "profile": "tabular-data-package",
-  "licenses": [
-    {
-      "name": "CC0-1.0",
-      "title": "CC0 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }
-  ],
-  "keywords": [
-    "animal movement",
-    "animal tracking",
-    "gps tracking",
-    "accelerometer",
-    "temperature",
-    "biologging",
-    "birds",
-    "LifeWatch",
-    "UvA-BiTS",
-    "Movebank"
-  ],
-  "homepage": "https://doi.org/10.5281/zenodo.3540799",
-  "contributors": [
-    {
-      "title": "Stienen EWM, Desmet P, Milotic T, Hernandez F, Deneudt K, Bouten W, Müller W, Matheve H, Lens L",
-      "role": "author"
-    }
-  ],
   "resources": [
     {
       "name": "reference-data",
