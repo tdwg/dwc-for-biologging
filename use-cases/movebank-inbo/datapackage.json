@@ -176,7 +176,11 @@
             "title": "tag serial no",
             "description": "The serial number of the tag. Example: 'MN93-33243'; Units: none; Entity described: tag"
           }
-        ]
+        ],
+        "primaryKey": [
+          "tag-id",
+          "animal-id"
+        ],
       }
     },
     {
@@ -346,6 +350,22 @@
             "title": "study name",
             "description": "The name of the study in Movebank. Example: 'Coyotes, Kays and Bogan, Albany NY'; Units: none; Entity described: study (event)"
           }
+        ],
+        "primaryKey": "event-id",
+        "foreignKeys": [
+          {
+            "fields": [
+              "tag-local-identifier",
+              "individual-local-identifier"
+            ],
+            "reference": {
+              "resource": "reference-data",
+              "fields": [
+                "tag-id",
+                "animal-id"
+              ]
+            }
+          }
         ]
       }
     },
@@ -466,6 +486,22 @@
             "format": "default",
             "description": "The name of the study in Movebank. Example: 'Coyotes, Kays and Bogan, Albany NY'; Units: none; Entity described: study (event)",
             "title": "study name"
+          }
+        ],
+        "primaryKey": "event-id",
+        "foreignKeys": [
+          {
+            "fields": [
+              "tag-local-identifier",
+              "individual-local-identifier"
+            ],
+            "reference": {
+              "resource": "reference-data",
+              "fields": [
+                "tag-id",
+                "animal-id"
+              ]
+            }
           }
         ]
       }
