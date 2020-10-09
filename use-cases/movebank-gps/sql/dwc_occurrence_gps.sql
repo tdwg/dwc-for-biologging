@@ -6,7 +6,7 @@ Data is subsampled, only keeping the first record for each hour. The tag-id-anim
 used as eventID for an optional event core. Static Darwin Core values are marked with FIXED VALUE.
 
 GPS
-  
+
 event-id                                Y
 visible                                 Y: as filter
 timestamp                               Y
@@ -76,9 +76,9 @@ SELECT
 -- individualCount
 -- organismQuantity
 -- organismQuantityType
--- sex                                  Captured at deployment start/end, not extended to gps records
--- lifeStage                            Captured at deployment start/end, not extended to gps records
--- reproductiveCondition                Captured at deployment start/end, not extended to gps records
+-- sex                                  Determined at deployment start, not extended to gps records
+-- lifeStage                            Determined at deployment start, not extended to gps records
+-- reproductiveCondition                Determined at deployment start, not extended to gps records
 -- behavior
 -- establishmentMeans
 -- occurrenceStatus                     FIXED VALUE
