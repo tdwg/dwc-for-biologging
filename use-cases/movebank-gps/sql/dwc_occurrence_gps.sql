@@ -37,24 +37,25 @@ SELECT
   "event-id" AS "id",
 
 -- RECORD-LEVEL
--- type
+-- type                                 FIXED VALUE
   'Event' AS "type",
 -- modified
--- language
--- license
--- rightsHolder
+-- language                             FIXED VALUE
+  'en' AS "language",
+-- license                              Only available in dataset metadata
+-- rightsHolder                         Only available in dataset metadata
 -- accessRights
 -- bibliographicCitation
 -- references
 -- institutionID
 -- collectionID
--- datasetID
+-- datasetID                            Only available in dataset metadata
 -- institutionCode
 -- collectionCode
 -- datasetName
   "study-name" AS "datasetName",
 -- ownerInstitutionCode
--- basisOfRecord
+-- basisOfRecord                        FIXED VALUE
   'MachineObservation' AS "basisOfRecord",
 -- informationWithheld
 -- dataGeneralizations
@@ -80,7 +81,8 @@ SELECT
 -- reproductiveCondition
 -- behavior
 -- establishmentMeans
--- occurrenceStatus
+-- occurrenceStatus                     FIXED VALUE
+  'present' AS "occurrenceStatus",
 -- preparations
 -- disposition
 -- otherCatalogNumbers
@@ -157,7 +159,7 @@ SELECT
   "location-lat" AS "decimalLatitude",
 -- decimalLongitude
   "location-long" AS "decimalLongitude",
--- geodeticDatum
+-- geodeticDatum                        FIXED VALUE
   'WGS84' AS "geodeticDatum",
 -- coordinateUncertaintyInMeters
   "location-error-numerical" AS "coordinateUncertaintyInMeters",
@@ -205,7 +207,7 @@ SELECT
 -- namePublishedIn
 -- namePublishedInYear
 -- higherClassification
--- kingdom                              Assumed 'Animalia' for all data
+-- kingdom                              FIXED VALUE: assumed 'Animalia' for all data
   'Animalia' AS "kingdom"
 -- phylum
 -- class
