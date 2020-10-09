@@ -40,8 +40,7 @@ SELECT
 -- type                                 FIXED VALUE
   'Event' AS "type",
 -- modified
--- language                             FIXED VALUE
-  'en' AS "language",
+-- language
 -- license                              Only available in dataset metadata
 -- rightsHolder                         Only available in dataset metadata
 -- accessRights
@@ -217,7 +216,7 @@ SELECT
 -- subgenus
 -- specificEpithet
 -- infraspecificEpithet
--- taxonRank                            Could be species or subspecies
+-- taxonRank                            Not in source data: could be species or subspecies
 -- verbatimTaxonRank
 -- scientificNameAuthorship
 -- vernacularName
