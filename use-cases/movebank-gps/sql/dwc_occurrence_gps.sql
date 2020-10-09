@@ -33,8 +33,8 @@ study-name                              Y
 */
 
 SELECT
--- id                                   Unique record id
-  gps."event-id" AS "id",
+-- occurrenceID                         The unique ID per record is called "event-id" in Movebank
+  gps."event-id" AS "occurrenceID",
 
 -- RECORD-LEVEL
 -- type                                 FIXED VALUE
@@ -66,8 +66,7 @@ SELECT
 -- Not applicable
 
 -- OCCURRENCE
--- occurrenceID                         Same as id
-  gps."event-id" AS "occurrenceID",
+-- occurrenceID                         Added as first field
 -- catalogNumber
 -- occurrenceRemarks
 -- recordNumber
