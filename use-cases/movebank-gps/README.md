@@ -13,11 +13,34 @@ Two data packages were made to describe the data:
 - [`datapackage.json`](data/raw/datapackage.json): test data package, containing 2013 reference and gps data (without `import-marked-outlier`) for [dataset v1](https://doi.org/10.5281/zenodo.3540800).
 - [`datapackage.yaml`](data/raw/datapackage.yaml): production data package containing all reference, gps and acceleration data for [dataset v2](https://doi.org/10.5281/zenodo.3968687). Will fail because of [list of zipped csvs](https://github.com/frictionlessdata/frictionless-py/issues/444) issue.
 
+## Transformation
 
-Goal:
+1. Validate data package (optional)
 
-1. Make the dataset a valid [Frictionless Tabular Data Package](https://specs.frictionlessdata.io/tabular-data-package/) by adding a `datapackage.json`. As long as this is a work in progress, the file will be added to this repository rather than it being part of the dataset.
-2. Read the dataset as a Data Package.
-3. Write code/documentation to convert the dataset to Darwin Core. This conversion will be lossy: losing columns (e.g. deployment & tag fields) and rows (e.g. subsampling by hour). The original data remains available on Zenodo.
-4. Save the converted data as a staging dataset that can be reviewed/indexed as Darwin Core by GBIF and others. This staging dataset will also be a Data Package.
-5. Review the conversion by members of the Machine Observation group and adapt where necessary.
+```
+$ frictionless validate data/raw/datapackage.json
+```
+
+2. Load data package into sqlite database:
+
+```
+$ f2sqlite data/raw/datapackage.json data/interim/movebank_gps.sqlite3
+```
+
+3. Test database connection (see [documentation](https://sqlite.org/cli.html)):
+
+```
+$ sqlite3
+sqlite> .open data/interim/movebank_gps.sqlite3
+sqlite> SELECT COUNT(*) FROM gps;
+478274
+```
+
+4. Convert GPS data to Darwin Core
+
+```
+sqlite> .headers on
+sqlite> .mode csv
+sqlite> .once data/processed/occurrence_gps.csv
+sqlite> .read sql/dwc_occurrence_gps.sql
+```
