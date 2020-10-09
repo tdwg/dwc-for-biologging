@@ -1,9 +1,13 @@
-## Movebank use case: LBBG_ZEEBRUGGE
+# Movebank GPS data
 
-_LBBG_ZEEBRUGGE - Lesser black-backed gulls (Larus fuscus, Laridae) breeding at the southern North Sea coast (Belgium and the Netherlands)_ is a bird tracking dataset published by the [Research Institute for Nature and Forest (INBO)](https://www.inbo.be/en). It contains reference, gps and acceleration data formatted in the [Movebank attribute dictionary](http://vocab.nerc.ac.uk/collection/MVB/current/) and is available as open data on Zenodo.
+## Rationale
 
-- Dataset: <https://doi.org/10.5281/zenodo.3540799>
-- datapackage.json: [datapackage.json](data/raw/datapackage.json)
+Lossy transformation of GPS data formatted in the [Movebank Attribute Dictionary](https://www.movebank.org/node/2381) to Darwin Core that can be indexed by GBIF.
+
+## Example dataset
+
+_LBBG_ZEEBRUGGE - Lesser black-backed gulls (Larus fuscus, Laridae) breeding at the southern North Sea coast (Belgium and the Netherlands)_ is a [bird tracking dataset published by the [Research Institute for Nature and Forest (INBO)](https://www.inbo.be/en). It contains reference, gps and acceleration data formatted in the [Movebank attribute dictionary](http://vocab.nerc.ac.uk/collection/MVB/current/) and is available as open data on [Zenodo](https://doi.org/10.5281/zenodo.3540799).
+
 
 Goal:
 
