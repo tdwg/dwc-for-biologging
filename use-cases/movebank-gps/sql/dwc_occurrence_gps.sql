@@ -1,34 +1,34 @@
 /*
 Created by Peter Desmet (INBO)
 
-This query transforms Movebank GPS data to Darwin Core MachineObservation occurrence data. Data is 
-subsampled, only keeping the first record for each hour. The tag-id-animal-id combination is used as 
-eventID for an optional event core.
+This query transforms Movebank GPS data to Darwin Core MachineObservation occurrence data.
+Data is subsampled, only keeping the first record for each hour. The tag-id-animal-id combination is 
+used as eventID for an optional event core. Static Darwin Core values are marked with FIXED VALUE.
 
 GPS
   
-event-id                               Y
-visible                                Y: as filter
-timestamp                              Y
-location-long                          Y
-location-lat                           Y
-bar:barometric-pressure                N
-external-temperature                   N
-gps:dop                                N
-gps:satellite-count                    N
-gps-time-to-fix                        N
-ground-speed                           N
-heading                                N
-height-above-msl                       Y
-import-marked-outlier                  Y: as filter
-location-error-numerical               Y
-manually-marked-outlier                Y: as filter
-vertical-error-numerical               Y
-sensor-type                            Y
-individual-taxon-canonical-name        Y
-tag-local-identifier                   Y
-individual-local-identifier            Y
-study-name                             Y
+event-id                                Y
+visible                                 Y: as filter
+timestamp                               Y
+location-long                           Y
+location-lat                            Y
+bar:barometric-pressure                 N
+external-temperature                    N
+gps:dop                                 N
+gps:satellite-count                     N
+gps-time-to-fix                         N
+ground-speed                            N
+heading                                 N
+height-above-msl                        Y
+import-marked-outlier                   Y: as filter
+location-error-numerical                Y
+manually-marked-outlier                 Y: as filter
+vertical-error-numerical                Y
+sensor-type                             Y
+individual-taxon-canonical-name         Y
+tag-local-identifier                    Y
+individual-local-identifier             Y
+study-name                              Y
 
 */
 
