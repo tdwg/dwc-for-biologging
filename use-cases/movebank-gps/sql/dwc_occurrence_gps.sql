@@ -34,7 +34,7 @@ study-name                              Y
 
 SELECT
 -- id                                   Unique record id
-  "event-id" AS "id",
+  gps."event-id" AS "id",
 
 -- RECORD-LEVEL
 -- type                                 FIXED VALUE
@@ -53,13 +53,13 @@ SELECT
 -- institutionCode
 -- collectionCode
 -- datasetName
-  "study-name" AS "datasetName",
+  gps."study-name" AS "datasetName",
 -- ownerInstitutionCode
 -- basisOfRecord                        FIXED VALUE
   'MachineObservation' AS "basisOfRecord",
 -- informationWithheld
 -- dataGeneralizations
-  'subsampled by hour: first of ' || count(*) || ' records' AS "dataGeneralizations",
+  'subsampled by hour: first of ' || gps."subsample-count" || ' records' AS "dataGeneralizations",
 -- dynamicProperties
 
 -- MATERIALSAMPLE
@@ -67,7 +67,7 @@ SELECT
 
 -- OCCURRENCE
 -- occurrenceID                         Same as id
-  "event-id" AS "occurrenceID",
+  gps."event-id" AS "occurrenceID",
 -- catalogNumber
 -- occurrenceRemarks
 -- recordNumber
@@ -76,9 +76,9 @@ SELECT
 -- individualCount
 -- organismQuantity
 -- organismQuantityType
--- sex
--- lifeStage
--- reproductiveCondition
+-- sex                                  Captured at deployment start/end, not extended to gps records
+-- lifeStage                            Captured at deployment start/end, not extended to gps records
+-- reproductiveCondition                Captured at deployment start/end, not extended to gps records
 -- behavior
 -- establishmentMeans
 -- occurrenceStatus                     FIXED VALUE
@@ -93,8 +93,9 @@ SELECT
 
 -- ORGANISM
 -- organismID
-  "individual-local-identifier" AS "organismID",
+  ref."animal-id" AS "organismID",
 -- organismName
+  ref."animal-nickname" AS "organismName",
 -- organismScope
 -- associatedOccurrences
 -- associatedOrganisms
@@ -103,15 +104,15 @@ SELECT
 
 -- EVENT
 -- eventID                              Combination of tag-id:animal-id
-  "tag-local-identifier" ||  '-' || "individual-local-identifier" AS "eventID",
+  ref."tag-id" ||  '-' || ref."animal-id" AS "eventID",
 -- parentEventID
 -- samplingProtocol
-  "sensor-type" AS "samplingProtocol",
+  gps."sensor-type" AS "samplingProtocol",
 -- sampleSizeValue
 -- sampleSizeUnit
 -- samplingEffort
 -- eventDate                            ISO-8601 in UTC
-  STRFTIME('%Y-%m-%dT%H%M%SZ', "timestamp") AS "eventDate",
+  STRFTIME('%Y-%m-%dT%H%M%SZ', gps."timestamp") AS "eventDate",
 -- eventTime                            Included in eventDate
 -- startDayOfYear
 -- endDayOfYear
@@ -146,8 +147,8 @@ SELECT
 -- minimumDepthInMeters
 -- maximumDepthInMeters
 -- minimumDistanceAboveSurfaceInMeters
-  "height-above-msl" AS "minimumDistanceAboveSurfaceInMeters",
--- maximumDistanceAboveSurfaceInMeters
+  gps."height-above-msl" AS "minimumDistanceAboveSurfaceInMeters",
+-- maximumDistanceAboveSurfaceInMeters  Same as minimumDistanceAboveSurfaceInMeters
 -- locationAccordingTo
 -- locationRemarks
 -- verbatimCoordinates
@@ -156,13 +157,13 @@ SELECT
 -- verbatimCoordinateSystem
 -- verbatimSRS
 -- decimalLatitude
-  "location-lat" AS "decimalLatitude",
+  gps."location-lat" AS "decimalLatitude",
 -- decimalLongitude
-  "location-long" AS "decimalLongitude",
+  gps."location-long" AS "decimalLongitude",
 -- geodeticDatum                        FIXED VALUE
   'WGS84' AS "geodeticDatum",
 -- coordinateUncertaintyInMeters
-  "location-error-numerical" AS "coordinateUncertaintyInMeters",
+  gps."location-error-numerical" AS "coordinateUncertaintyInMeters",
 -- coordinatePrecision
 -- pointRadiusSpatialFit
 -- footprintWKT
@@ -199,7 +200,7 @@ SELECT
 -- namePublishedInID
 -- taxonConceptID
 -- scientificName
-  "individual-taxon-canonical-name" AS "scientificName",
+  ref."animal-taxon" AS "scientificName",
 -- acceptedNameUsage
 -- parentNameUsage
 -- originalNameUsage
@@ -227,17 +228,24 @@ SELECT
 -- taxonRemarks
 
 FROM
-  gps
+  (
+    SELECT
+      *,
+      COUNT(*) AS "subsample-count"
+    FROM gps
+    WHERE
+      visible = 1
+      AND "import-marked-outlier" IS FALSE
+      AND "manually-marked-outlier" IS FALSE
+    GROUP BY
+    -- Group by date+hour
+      STRFTIME('%Y-%m-%dT%H', "timestamp")
+    HAVING
+    -- Take first record within group. timestamps are assumed to be ordered chronologically
+      ROWID = MIN(ROWID)
+  ) AS gps
 
-WHERE
-  visible = 1
-  AND "import-marked-outlier" IS FALSE
-  AND "manually-marked-outlier" IS FALSE
-
-GROUP BY
--- Group by date+hour
-  STRFTIME('%Y-%m-%dT%H', "timestamp")
-
-HAVING
--- Take first row within group. timestamps are assumed to be ordered chronologically
-  ROWID = MIN(ROWID)
+  LEFT JOIN reference_data AS ref
+  ON
+    gps."tag-local-identifier" = ref."tag-id"
+    AND gps."individual-local-identifier" = ref."animal-id"
