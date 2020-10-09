@@ -3,7 +3,7 @@
 _LBBG_ZEEBRUGGE - Lesser black-backed gulls (Larus fuscus, Laridae) breeding at the southern North Sea coast (Belgium and the Netherlands)_ is a bird tracking dataset published by the [Research Institute for Nature and Forest (INBO)](https://www.inbo.be/en). It contains reference, gps and acceleration data formatted in the [Movebank attribute dictionary](http://vocab.nerc.ac.uk/collection/MVB/current/) and is available as open data on Zenodo.
 
 - Dataset: <https://doi.org/10.5281/zenodo.3540799>
-- datapackage.json: [datapackage.json](datapackage.json)
+- datapackage.json: [datapackage.json](data/raw/datapackage.json)
 
 Goal:
 
