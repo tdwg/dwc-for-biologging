@@ -8,10 +8,11 @@ Lossy transformation of GPS data formatted in the [Movebank Attribute Dictionary
 
 _LBBG_ZEEBRUGGE - Lesser black-backed gulls (Larus fuscus, Laridae) breeding at the southern North Sea coast (Belgium and the Netherlands)_ is a [bird tracking dataset published by the [Research Institute for Nature and Forest (INBO)](https://www.inbo.be/en). It contains reference, gps and acceleration data formatted in the [Movebank attribute dictionary](http://vocab.nerc.ac.uk/collection/MVB/current/) and is available as open data on [Zenodo](https://doi.org/10.5281/zenodo.3540799).
 
-Two data packages were made to describe the data:
+Important files:
 
-- [`datapackage.json`](data/raw/datapackage.json): test data package, containing 2013 reference and gps data (without `import-marked-outlier`) for [dataset v1](https://doi.org/10.5281/zenodo.3540800).
-- [`datapackage.yaml`](data/raw/datapackage.yaml): production data package containing all reference, gps and acceleration data for [dataset v2](https://doi.org/10.5281/zenodo.3968687). Will fail because of [list of zipped csvs](https://github.com/frictionlessdata/frictionless-py/issues/444) issue.
+- [`datapackage.json`](data/raw/datapackage.json): describes [dataset version 1](https://doi.org/10.5281/zenodo.3540800), but reduced to 2013 reference and gps data.
+- [`datapackage.yaml`](data/raw/datapackage.yaml): describes a [dataset  version 2](https://doi.org/10.5281/zenodo.3968687), containing all reference, gps and acceleration data. Will fail because of [list of zipped csvs](https://github.com/frictionlessdata/frictionless-py/issues/444) issue. Note: has additional field `import-marked-outlier`.
+- [sql](sql): documented transformations to Darwin Core.
 
 ## Transformation
 

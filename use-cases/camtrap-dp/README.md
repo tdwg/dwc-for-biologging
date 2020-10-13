@@ -8,9 +8,10 @@ Lossy transformation of camera trap data formatted as a [Camtrap Data Package](h
 
 _Agouti export for Monitoring Faunabeheerzone 8_ is a camera trap dataset created by the [Research Institute for Nature and Forest (INBO)](https://www.inbo.be/en). It contains deployments, media and observations data formatted as a [Camtrap Data Package](https://gitlab.com/oscf/camtrap-package-schemas) and a small sample is [deposited in this repository](data/raw).
 
-Data package that describes the data:
+Important files:
 
-- [`datapackage.json`](data/raw/datapackage.json): follows the [Camtrap DP schema](https://gitlab.com/oscf/camtrap-package-schemas/-/blob/master/camtrap-package-profile.json).
+- [`datapackage.json`](data/raw/datapackage.json): describes the dataset and follows the [Camtrap DP schema](https://gitlab.com/oscf/camtrap-package-schemas/-/blob/master/camtrap-package-profile.json).
+- [sql](sql): documented transformations to Darwin Core.
 
 ## Transformation
 
