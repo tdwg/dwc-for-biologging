@@ -16,22 +16,27 @@ Data package that describes the data:
 
 1. Validate data package (optional)
 
-    $ frictionless validate data/raw/datapackage.json
+```
+$ frictionless validate data/raw/datapackage.json
+```
 
 2. Make output directories:
 
-    $ mkdir data/interim data/processed
+```
+$ mkdir data/interim data/processed
+```
 
 3. Load data package into sqlite database:
 
-    $ f2sqlite data/raw/datapackage.json data/interim/camtrap_dp.sqlite3
+```
+$ f2sqlite data/raw/datapackage.json data/interim/camtrap_dp.sqlite3
+```
 
 4. Test database connection (see [documentation](https://sqlite.org/cli.html)):
 
-    $ sqlite3
-    sqlite> .open data/interim/camtrap_dp.sqlite3
-    sqlite> SELECT COUNT(*) FROM observations;
-    1367
-
-
-
+```
+$ sqlite3
+sqlite> .open data/interim/camtrap_dp.sqlite3
+sqlite> SELECT COUNT(*) FROM observations;
+1367
+```
