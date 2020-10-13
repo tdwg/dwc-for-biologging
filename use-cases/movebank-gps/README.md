@@ -15,32 +15,28 @@ Two data packages were made to describe the data:
 
 ## Transformation
 
-1. Validate data package (optional)
+1. Validate data package (optional):
 
-```
-$ frictionless validate data/raw/datapackage.json
-```
+    $ frictionless validate data/raw/datapackage.json
 
-2. Load data package into sqlite database:
+2. Make output directories:
 
-```
-$ f2sqlite data/raw/datapackage.json data/interim/movebank_gps.sqlite3
-```
+    $ mkdir data/interim data/processed
 
-3. Test database connection (see [documentation](https://sqlite.org/cli.html)):
+3. Load data package into sqlite database:
 
-```
-$ sqlite3
-sqlite> .open data/interim/movebank_gps.sqlite3
-sqlite> SELECT COUNT(*) FROM gps;
-478274
-```
+    $ f2sqlite data/raw/datapackage.json data/interim/movebank_gps.sqlite3
 
-4. Convert GPS data to Darwin Core
+4. Test database connection (see [documentation](https://sqlite.org/cli.html)):
 
-```
-sqlite> .headers on
-sqlite> .mode csv
-sqlite> .once data/processed/occurrence_gps.csv
-sqlite> .read sql/dwc_occurrence_gps.sql
-```
+    $ sqlite3
+    sqlite> .open data/interim/movebank_gps.sqlite3
+    sqlite> SELECT COUNT(*) FROM gps;
+    478274
+
+5. Convert GPS data to Darwin Core
+
+    sqlite> .headers on
+    sqlite> .mode csv
+    sqlite> .once data/processed/occurrence_gps.csv
+    sqlite> .read sql/dwc_occurrence_gps.sql
