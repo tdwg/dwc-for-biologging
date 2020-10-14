@@ -270,6 +270,11 @@ print(i)
 # finalize
 #---------------------------------------------
 
+# manually override the species retrieved for Mirounga leonina as per https://github.com/tdwg/dwc-for-biologging/issues/19
+condition<-occurrenceExtension[occurrenceExtension$scientificName=="Mirounga leonina",]
+occurrenceExtension[condition,]$scientificNameID<-"urn:lsid:marinespecies.org:taxname:231413"
+
+
 #save data to processed
 write.csv(eventCore, paste(loc, "03_processed","RAATD_eventCore.csv", sep="/"), na="", row.names = FALSE)
 write.csv(occurrenceExtension, paste(loc, "03_processed","RAATD_occurrenceExtension.csv", sep="/"), na="", row.names = FALSE)
