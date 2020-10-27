@@ -1,9 +1,11 @@
 /*
 Created by Peter Desmet (INBO)
 
-This query transforms Movebank GPS data to Darwin Core MachineObservation occurrence data.
-Data is subsampled, only keeping the first record for each hour. The tag-id-animal-id combination is 
-used as eventID for an optional event core. Static Darwin Core values are marked with FIXED VALUE.
+This query transforms Movebank GPS data to Darwin Core MachineObservation occurrence data. The data 
+are subsampled, only keeping the first record for each hour (indicated in dataGeneralizations). The 
+eventID (tag-id/animal-id) allows to group deployment and gps occurrences as events.
+
+Static Darwin Core values are marked with FIXED VALUE.
 
 GPS
 
@@ -27,13 +29,17 @@ vertical-error-numerical                Y
 sensor-type                             Y
 individual-taxon-canonical-name         Y
 tag-local-identifier                    Y
-individual-local-identifier             Y
+individual-local-identifier             Y: as part of eventID
 study-name                              Y
+
+REFERENCE DATA (JOINED)
+
+animal_nickname                         Y
 
 */
 
 SELECT
--- occurrenceID                         The unique ID per record is called "event-id" in Movebank
+-- occurrenceID                         Unique record ID for gps measurement in Movebank
   gps."event-id" AS "occurrenceID",
 
 -- RECORD-LEVEL
