@@ -16,22 +16,47 @@ animal-taxon                            Y
 deploy-on-date                          Y
 deploy-off-date                         N
 animal-comments                         Y
+animal-death-comments
+animal-exact-date-of-birth
+animal-latest-date-born
 animal-life-stage                       Y
 animal-mass                             N
 animal-nickname                         Y
+animal-reproductive-condition
 animal-ring-id                          N
 animal-sex                              Y
+animal-taxon-detail
 attachment-type                         N
+behavior-according-to
+data-processing-software
+deploy-off-latitude
+deploy-off-longitude
+deploy-off-person
 deploy-on-latitude                      Y
 deploy-on-longitude                     Y
+deploy-on-person
 deployment-comments                     Y
+deployment-end-comments
 deployment-end-type                     N
 deployment-id                           Y
+duty-cycle
+geolocator-calibration
+geolocator-light-threshold
+geolocator-sensor-comments
+geolocator-sun-elevation-angle
+habitat-according-to
 location-accuracy-comments              N: is regarding the sensor data
+manipulation-comments
 manipulation-type                       N
 study-site                              N
+tag-beacon-frequency
+tag-comments
+tag-failure-comments
 tag-manufacturer-name                   N
 tag-mass                                N
+tag-model
+tag-processing-type
+tag-production-date
 tag-readout-method                      N
 tag-serial-no                           N
 
