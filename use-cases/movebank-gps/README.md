@@ -43,11 +43,13 @@ sqlite> SELECT COUNT(*) FROM gps;
 478274
 ```
 
-5. Convert GPS data to Darwin Core
+5. Convert data to Darwin Core
 
 ```
 sqlite> .headers on
 sqlite> .mode csv
-sqlite> .once data/processed/occurrence_gps.csv
+sqlite> .once data/processed/dwc_occurrence_deployment.csv
+sqlite> .read sql/dwc_occurrence_deployment.sql
+sqlite> .once data/processed/dwc_occurrence_gps.csv
 sqlite> .read sql/dwc_occurrence_gps.sql
 ```
