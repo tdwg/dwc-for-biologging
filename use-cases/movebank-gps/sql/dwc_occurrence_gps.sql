@@ -110,7 +110,7 @@ SELECT
 -- sampleSizeUnit
 -- samplingEffort
 -- eventDate                            ISO-8601 in UTC
-  STRFTIME('%Y-%m-%dT%H%M%SZ', gps."timestamp") AS "eventDate",
+  STRFTIME('%Y-%m-%dT%H:%M:%SZ', gps."timestamp") AS "eventDate",
 -- eventTime                            Included in eventDate
 -- startDayOfYear
 -- endDayOfYear
