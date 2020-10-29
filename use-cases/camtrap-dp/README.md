@@ -41,3 +41,14 @@ sqlite> .open data/interim/camtrap_dp.sqlite3
 sqlite> SELECT COUNT(*) FROM observations;
 1367
 ```
+
+5. Convert data to Darwin Core
+
+```
+sqlite> .headers on
+sqlite> .mode csv
+sqlite> .once data/processed/dwc_event.csv
+sqlite> .read sql/dwc_event.sql
+sqlite> .once data/processed/dwc_occurrence.csv
+sqlite> .read sql/dwc_occurrence.sql
+```
