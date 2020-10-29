@@ -1,10 +1,10 @@
 /*
 Created by Peter Desmet (INBO)
 
-This query transforms Movebank reference data to Darwin Core HumanObservation occurrence data. Only 
-the deployment start (deploy-on) information is used, when life stage etc. are often determined, 
-not deployment end (deploy-off), which is often arbitrarily set to end a deployment. The eventID 
-(tag-id/animal-id) allows to group deployment and gps occurrences as events.
+This query transforms Movebank reference data to Darwin Core HumanObservation occurrence data, as 
+an Occurrence core. Only the deployment start (deploy-on) information is used, when life stage etc. 
+are often determined, not deployment end (deploy-off), which is often arbitrarily set to end a 
+deployment. The eventID (tag-id/animal-id) allows to group deployment and gps occurrences as events.
 
 Static Darwin Core values are marked with FIXED VALUE.
 
