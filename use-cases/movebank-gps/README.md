@@ -2,7 +2,7 @@
 
 ## Rationale
 
-Lossy transformation of GPS data formatted in the [Movebank Attribute Dictionary](https://www.movebank.org/node/2381) to Darwin Core that can be indexed by GBIF.
+Lossy transformation of GPS data formatted in the [Movebank Attribute Dictionary](https://www.movebank.org/node/2381) to Darwin Core that could be indexed by GBIF/OBIS.
 
 ## Example dataset
 
@@ -13,6 +13,7 @@ Important files:
 - [`datapackage.json`](data/raw/datapackage.json): describes [dataset version 1](https://doi.org/10.5281/zenodo.3540800), but reduced to 2013 reference and gps data.
 - [`datapackage.yaml`](data/raw/datapackage.yaml): describes a [dataset  version 2](https://doi.org/10.5281/zenodo.3968687), containing all reference, gps and acceleration data. Will fail because of [list of zipped csvs](https://github.com/frictionlessdata/frictionless-py/issues/444) issue. Note: has additional field `import-marked-outlier`.
 - [sql](sql): documented transformations to Darwin Core.
+- [data/processed](data/processed): resulting Darwin Core data.
 
 ## Transformation
 

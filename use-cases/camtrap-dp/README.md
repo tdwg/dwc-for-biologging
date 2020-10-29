@@ -2,7 +2,7 @@
 
 ## Rationale
 
-Lossy transformation of camera trap data formatted as a [Camera Trap Data Package](https://gitlab.com/oscf/camtrap-dp) to Darwin Core that can be indexed by GBIF.
+Lossy transformation of camera trap data formatted as a [Camera Trap Data Package](https://gitlab.com/oscf/camtrap-dp) to Darwin Core that could be indexed by GBIF/OBIS.
 
 ## Example dataset
 
@@ -12,6 +12,7 @@ Important files:
 
 - [`datapackage.json`](data/raw/datapackage.json): describes the dataset and follows the [Camtrap DP schema](https://gitlab.com/oscf/camtrap-package-schemas/-/blob/master/camtrap-package-profile.json).
 - [sql](sql): documented transformations to Darwin Core.
+- [data/processed](data/processed): resulting Darwin Core data.
 
 ## Transformation
 
