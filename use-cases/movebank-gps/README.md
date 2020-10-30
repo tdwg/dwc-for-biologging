@@ -44,7 +44,7 @@ sqlite> SELECT COUNT(*) FROM gps;
 478274
 ```
 
-5. Convert data to Darwin Core
+5. Convert data to Darwin Core:
 
 ```
 sqlite> .headers on
