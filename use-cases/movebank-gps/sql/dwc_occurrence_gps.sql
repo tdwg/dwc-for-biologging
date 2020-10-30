@@ -1,8 +1,8 @@
 /*
 Created by Peter Desmet (INBO)
 
-This query transforms Movebank GPS data to Darwin Core MachineObservation occurrence data, as an 
-Occurrence core. The data are subsampled, only keeping the first record for each hour (indicated in 
+This query transforms Movebank GPS data to a Darwin Core Occurrence core (Machine Observations). 
+The data are subsampled, only keeping the first record for each hour (indicated in 
 dataGeneralizations). The eventID (tag-id/animal-id) allows to group deployment and gps occurrences 
 as events.
 
