@@ -1,18 +1,9 @@
 # Camera trap data
 
-## Rationale
+Lossy transformation to Darwin Core of camera trap data formatted as a [Camera Trap Data Package](https://gitlab.com/oscf/camtrap-dp), to enable indexing by GBIF/OBIS.
 
-Lossy transformation of camera trap data formatted as a [Camera Trap Data Package](https://gitlab.com/oscf/camtrap-dp) to Darwin Core that could be indexed by GBIF/OBIS.
 
-## Example dataset
 
-_Agouti export for Monitoring Faunabeheerzone 8_ is a camera trap dataset created by the [Research Institute for Nature and Forest (INBO)](https://www.inbo.be/en). It contains deployments, media and observations data formatted as a [Camtrap DP](https://gitlab.com/oscf/camtrap-dp) and a small sample is [deposited in this repository](data/raw).
-
-Important files:
-
-- [`datapackage.json`](data/raw/datapackage.json): describes the dataset and follows the [Camtrap DP schema](https://gitlab.com/oscf/camtrap-package-schemas/-/blob/master/camtrap-package-profile.json).
-- [sql](sql): documented transformations to Darwin Core.
-- [data/processed](data/processed): resulting Darwin Core data.
 
 ## Transformation
 
@@ -53,3 +44,10 @@ sqlite> .read sql/dwc_occurrence.sql
 sqlite> .once data/processed/dwc_multimedia.csv
 sqlite> .read sql/dwc_multimedia.sql
 ```
+
+## Example dataset
+
+_Agouti export for Monitoring Faunabeheerzone 8_ is a camera trap dataset created by the [Research Institute for Nature and Forest (INBO)](https://www.inbo.be/en). It contains deployments, media and observations data formatted as a [Camtrap DP](https://gitlab.com/oscf/camtrap-dp) and a small sample is [deposited in this repository](data/raw).
+
+- [`datapackage.json`](data/raw/datapackage.json): describes the dataset and follows the [Camtrap DP schema](https://gitlab.com/oscf/camtrap-package-schemas/-/blob/master/camtrap-package-profile.json).
+- [data/processed](data/processed): resulting Darwin Core data.
