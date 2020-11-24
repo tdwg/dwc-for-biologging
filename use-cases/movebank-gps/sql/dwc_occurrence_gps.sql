@@ -1,11 +1,7 @@
 /*
 Created by Peter Desmet (INBO)
 
-This query transforms Movebank GPS data to a Darwin Core Occurrence core (Machine Observations). 
-The data are subsampled, only keeping the first record for each hour (indicated in 
-dataGeneralizations). The eventID (tag-id/animal-id) allows to group deployment and gps occurrences 
-as events.
-
+Based on https://rs.gbif.org/core/dwc_occurrence_2020-07-15.xml
 Static Darwin Core values are marked with FIXED VALUE.
 
 GPS
