@@ -6,6 +6,7 @@ Observations). This allows to link occurrences to images in a Multimedia extensi
 be possible if there already was an Event core. As a result, deployment start/end information is 
 not included.
 
+Based on https://rs.gbif.org/core/dwc_occurrence_2020-07-15.xml
 Static Darwin Core values are marked with FIXED VALUE.
 
 DEPLOYMENTS
