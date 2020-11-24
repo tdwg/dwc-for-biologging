@@ -1,10 +1,25 @@
 /*
 Created by Peter Desmet (INBO)
 
-This query transforms camtrap-dp observation data to Darwin Core MachineObservation occurrence 
-data, as an Occurrence extension.
-
+Based on https://rs.gbif.org/core/dwc_occurrence_2020-07-15.xml
 Static Darwin Core values are marked with FIXED VALUE.
+
+DEPLOYMENTS
+
+deployment_id                           Y
+location_id                             Y
+location_name                           Y
+longitude                               Y
+latitude                                Y
+start                                   N: Observation timestamp is used instead
+end                                     N: Observation timestamp is used instead
+setup_by                                N
+camera_id                               N
+camera_model                            N
+camera_interval                         N
+camera_height                           N
+tags                                    Y
+comments                                Y
 
 OBSERVATIONS
 
@@ -46,8 +61,12 @@ SELECT
 -- collectionID
 -- datasetID                            Only available in dataset metadata
 -- institutionCode
+-- collectionCode
 -- datasetName                          Only available in dataset metadata
 -- ownerInstitutionCode
+-- basisOfRecord                        FIXED VALUE
+  'MachineObservation' AS "basisOfRecord",
+-- informationWithheld
 -- dataGeneralizations
 -- dynamicProperties
 
@@ -97,7 +116,8 @@ SELECT
 -- eventID
   obs."deployment_id" AS "eventID",
 -- parentEventID
--- samplingProtocol                     Expressed at Event level
+-- samplingProtocol                     FIXED VALUE
+  'camera trap' AS "samplingProtocol",
 -- sampleSizeValue
 -- sampleSizeUnit
 -- samplingEffort
@@ -114,9 +134,15 @@ SELECT
 -- fieldNumber
 -- fieldNotes
 -- eventRemarks
+  CASE
+    WHEN dep."comments" IS NOT NULL AND dep."tags" IS NOT NULL THEN dep."comments" || ' | tags: ' || dep."tags"
+    WHEN dep."tags" IS NOT NULL THEN 'tags: ' || dep."tags"
+    ELSE dep."comments"
+  END AS "eventRemarks",
 
 -- LOCATION
 -- locationID
+  dep."location_id" AS "locationID",
 -- higherGeographyID
 -- higherGeography
 -- continent
@@ -129,6 +155,7 @@ SELECT
 -- county
 -- municipality
 -- locality
+  dep."location_name" AS "locality",
 -- verbatimLocality
 -- verbatimElevation
 -- minimumElevationInMeters
@@ -145,9 +172,12 @@ SELECT
 -- verbatimLongitude
 -- verbatimCoordinateSystem
 -- verbatimSRS
--- decimalLatitude                      Expressed at Event level
--- decimalLongitude                     Expressed at Event level
--- geodeticDatum                        Expressed at Event level
+-- decimalLatitude
+  dep."latitude" AS "decimalLatitude",
+-- decimalLongitude
+  dep."longitude" AS "decimalLongitude",
+-- geodeticDatum                        FIXED VALUE
+  'WGS84' AS "geodeticDatum",
 -- coordinateUncertaintyInMeters
 -- coordinatePrecision
 -- pointRadiusSpatialFit
@@ -179,7 +209,6 @@ SELECT
 -- identificationQualifier
 -- identificationVerificationStatus
   obs."classification_confidence" AS "identificationVerificationStatus",
-
 -- typeStatus
 
 -- TAXON
@@ -223,6 +252,11 @@ SELECT
 FROM
   observations AS obs
 
+  LEFT JOIN deployments AS dep
+  ON
+    obs."deployment_id" = dep."deployment_id"
+
 WHERE
   -- Select biological observations only (excluding observations marked as human, empty, vehicle)
+  -- Same filter should be used in dwc_multimedia.sql!
   obs."observation_type" = 'animal'
