@@ -1,9 +1,6 @@
 /*
 Created by Peter Desmet (INBO)
 
-This query transforms camtrap-dp image data to a Darwin Core Multimedia extension. Sets of images 
-will appear multiple times if these are used for multiple occurrences.
-
 Based on https://rs.gbif.org/extension/gbif/1.0/multimedia.xml
 Static Darwin Core values are marked with FIXED VALUE.
 

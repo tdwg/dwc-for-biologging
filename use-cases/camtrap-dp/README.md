@@ -2,10 +2,14 @@
 
 Lossy transformation to Darwin Core of camera trap data formatted as a [Camera Trap Data Package](https://gitlab.com/oscf/camtrap-dp), to enable indexing by GBIF/OBIS.
 
-
-
-
 ## Transformation
+
+Data are mapped as an **Occurrence core** and a **Simple Multimedia extension**. This is also the format recommended by [Cadman & González-Talaván (2014) Publishing Camera Trap Data: A Best Practice Guide](http://www.gbif.org/orc/?doc_id=6045) (see [template file](http://links.gbif.org/dcsmst)). Although this does not allow to capture the deployment date range, it does allow to share all relevant information about the source of the observations (i.e. the images), which is considered more worthwhile for primary occurrence data (see also [this discussion](https://github.com/tdwg/dwc-for-biologging/pull/35)).
+
+- [`dwc_occurrence.sql`](sql/dwc_occurrence.sql): This query transforms camtrap-dp observation data to a Darwin Core Occurrence core (Machine Observations). This allows to link occurrences to images in a Multimedia extension, which would not be possible if there already was an Event core. As a result, deployment start/end information is not included.
+- [`dwc_multimedia.sql`](sql/dwc_multimedia.sql): This query transforms camtrap-dp image data to a Darwin Core Simple Multimedia extension. Sets of images will appear multiple times if these are used for multiple occurrences.
+
+## Steps
 
 1. Validate data package (optional)
 
