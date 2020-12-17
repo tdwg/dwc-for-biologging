@@ -11,35 +11,48 @@ location_id                             Y
 location_name                           Y
 longitude                               Y
 latitude                                Y
-start                                   N: Observation timestamp is used instead
-end                                     N: Observation timestamp is used instead
+start                                   N: observation timestamp is used instead
+end                                     N: observation timestamp is used instead
 setup_by                                N
 camera_id                               N
 camera_model                            N
 camera_interval                         N
 camera_height                           N
+camera_angle                            N
+bait_use                                Y
+session                                 N: sessions events (grouping deployments) are not retained
+array                                   N
+feature_type                            Y
+habitat                                 ENABLE
 tags                                    Y
 comments                                Y
+_id                                     N
 
 OBSERVATIONS
 
 observation_id                          Y
 deployment_id                           Y
-sequence_id                             N: Only deployments are retained as Events in Darwin Core
-media_id                                N
+sequence_id                             N: link is made in dwc_multimedia
+multimedia_id                           N: link is made in dwc_multimedia
 timestamp                               Y
 observation_type                        Y: as filter
+sensor_method                           Y
+camera_setup                            N
 scientific_name                         Y
 vernacular_name                         Y
+is_domesticated                         Y
 count                                   Y
+count_new                               N: difficult to express
 age                                     Y
 sex                                     Y
+behaviour                               Y
 individual_id                           Y
 classification_method                   Y
 classified_by                           Y
 classification_date                     Y
 classification_confidence               Y
 comments                                Y
+_id                                     N
 
 */
 
@@ -91,6 +104,7 @@ SELECT
   obs."age" AS "lifeStage",
 -- reproductiveCondition
 -- behavior
+  obs."behaviour" AS "behavior",
 -- establishmentMeans
 -- occurrenceStatus                     FIXED VALUE
   'present' AS "occurrenceStatus",
@@ -111,13 +125,26 @@ SELECT
 -- associatedOrganisms
 -- previousIdentifications
 -- organismRemarks
+  CASE
+    WHEN obs."is_domesticated" THEN 'domesticated'
+    ELSE NULL
+  END AS "organismRemarks",
 
 -- EVENT
 -- eventID
   obs."deployment_id" AS "eventID",
 -- parentEventID
--- samplingProtocol                     FIXED VALUE
-  'camera trap' AS "samplingProtocol",
+-- samplingProtocol
+  'camera trap' ||
+  CASE
+    WHEN obs."sensor_method" IS NOT NULL THEN ' (' || obs."sensor_method" || ')'
+    ELSE ''
+  END ||
+  CASE
+    WHEN dep."bait_use" IS 'none' THEN ' without bait'
+    WHEN dep."bait_use" IS NOT NULL THEN ' with ' || dep."bait_use" || ' bait'
+    ELSE ''
+  END AS "samplingProtocol",
 -- sampleSizeValue
 -- sampleSizeUnit
 -- samplingEffort
@@ -131,6 +158,7 @@ SELECT
 -- day
 -- verbatimEventDate
 -- habitat
+--  dep."habitat" AS habitat,
 -- fieldNumber
 -- fieldNotes
 -- eventRemarks
@@ -167,6 +195,7 @@ SELECT
 -- maximumDistanceAboveSurfaceInMeters
 -- locationAccordingTo
 -- locationRemarks
+  dep."feature_type" AS "locationRemarks",
 -- verbatimCoordinates
 -- verbatimLatitude
 -- verbatimLongitude
@@ -253,8 +282,7 @@ FROM
   observations AS obs
 
   LEFT JOIN deployments AS dep
-  ON
-    obs."deployment_id" = dep."deployment_id"
+    ON obs."deployment_id" = dep."deployment_id"
 
 WHERE
   -- Select biological observations only (excluding observations marked as human, empty, vehicle)
