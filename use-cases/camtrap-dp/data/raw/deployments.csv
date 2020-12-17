@@ -1,6 +1,6 @@
 deployment_id,location_id,location_name,longitude,latitude,start,end,setup_by,camera_id,camera_model,camera_interval,camera_height,bait_use,feature_type,tags,comments
 1308f068-83ac-4432-90ea-619fa3154579,60c07798-f069-4dcc-997f-8243272609f1,2018_3_1002,4.70656,50.80712,2018-06-07T11:35:05Z,2018-07-03T13:51:17Z,Niko Boone,,,0,50,none,,Meerdaal West,
-23945adb-0c21-441e-9de9-85d99faf3a92,102e24cc-f0be-4d76-a0a7-207df901f59c,2018_3_751,4.66667,50.79618,2018-06-02T12:37:55Z,2018-07-06T20:15:18Z,Kathleen Vanhuyse,,,0,50,none,,Meerdaal West,
+23945adb-0c21-441e-9de9-85d99faf3a92,102e24cc-f0be-4d76-a0a7-207df901f59c,2018_3_751,4.66667,50.79618,2018-06-02T12:37:55Z,2018-07-06T20:15:18Z,Kathleen Vanhuyse,,,0,50,food,,Meerdaal West,apples as bait
 4a2fb56a-dcf1-4373-8090-e91cde99832f,7cd880d5-0b63-4ea3-8678-b1191cc32a6e,2018_3_1173,4.73384,50.81397,2018-06-08T16:10:05Z,2018-07-09T19:45:49Z,louis  Binon,,,0,50,none,,Meerdaal Oost,
 562ce88f-0b02-41e5-9b5a-80b5e0b5b40e,2caebcc9-dc8a-4aee-acc8-9abb8f0a7edb,2018_3_909,4.73375,50.80273,2018-06-08T15:44:28Z,2018-07-09T19:38:18Z,louis  Binon,,,0,50,none,,Meerdaal Oost,
 63e66e2c-db46-4091-a180-aa35a76f1d37,e6143a98-ecfd-49fd-ab08-ddf7a5be5ce7,2018_3_1280,4.74097,50.81844,2018-06-08T16:23:49Z,2018-07-09T19:58:23Z,louis  Binon,,,0,50,none,,Meerdaal Oost,
