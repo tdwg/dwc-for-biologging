@@ -247,6 +247,5 @@ FROM
   ) AS gps
 
   LEFT JOIN reference_data AS ref
-  ON
-    gps."tag-local-identifier" = ref."tag-id"
+    ON gps."tag-local-identifier" = ref."tag-id"
     AND gps."individual-local-identifier" = ref."animal-id"

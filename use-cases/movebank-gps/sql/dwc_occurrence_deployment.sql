@@ -274,6 +274,5 @@ FROM
     -- Take first record within group (only 0 or 1 expected)
       ROWID = MIN(ROWID)
   ) AS gps
-  ON
-    ref."tag-id" = gps."tag-local-identifier"
+    ON ref."tag-id" = gps."tag-local-identifier"
     AND ref."animal-id" = gps."individual-local-identifier"
