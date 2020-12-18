@@ -288,3 +288,6 @@ WHERE
   -- Select biological observations only (excluding observations marked as human, empty, vehicle)
   -- Same filter should be used in dwc_multimedia.sql!
   obs."observation_type" = 'animal'
+
+ORDER BY
+  obs."observation_id"
