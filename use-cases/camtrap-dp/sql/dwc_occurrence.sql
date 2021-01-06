@@ -258,7 +258,7 @@ SELECT
 -- namePublishedIn
 -- namePublishedInYear
 -- higherClassification
--- kingdom                              FIXED VALUE: assumed 'Animalia' for all data
+-- kingdom                              FIXED VALUE: in almost all use cases, it is safe to assume all observations are animals, see https://gitlab.com/oscf/camtrap-dp/-/issues/67
   'Animalia' AS "kingdom",
 -- phylum
 -- class
