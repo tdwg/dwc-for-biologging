@@ -16,6 +16,7 @@ end                                     N: observation timestamp is used instead
 setup_by                                N
 camera_id                               N
 camera_model                            N
+camera_timestamp                        N
 camera_interval                         N
 camera_height                           N
 camera_angle                            N
@@ -40,7 +41,6 @@ sensor_method                           Y
 camera_setup                            N
 scientific_name                         Y
 vernacular_name                         Y
-is_domesticated                         Y
 count                                   Y
 count_new                               N: difficult to express
 age                                     Y
@@ -49,7 +49,7 @@ behaviour                               Y
 individual_id                           Y
 classification_method                   Y
 classified_by                           Y
-classification_date                     Y
+classification_timestamp                Y
 classification_confidence               Y
 comments                                Y
 _id                                     N
@@ -125,10 +125,6 @@ SELECT
 -- associatedOrganisms
 -- previousIdentifications
 -- organismRemarks
-  CASE
-    WHEN obs."is_domesticated" THEN 'domesticated'
-    ELSE NULL
-  END AS "organismRemarks",
 
 -- EVENT
 -- eventID
@@ -229,7 +225,7 @@ SELECT
   obs."classified_by" AS "identifiedBy",
 -- identifiedByID
 -- dateIdentified                       ISO-8601 in UTC
-  STRFTIME('%Y-%m-%dT%H:%M:%SZ', obs."classification_date") AS "dateIdentified",
+  STRFTIME('%Y-%m-%dT%H:%M:%SZ', obs."classification_timestamp") AS "dateIdentified",
 -- identificationReferences
 -- identificationRemarks
   CASE
