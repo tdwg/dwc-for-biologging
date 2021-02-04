@@ -2,4 +2,5 @@
 .DS_Store
 
 # Data files
-use-cases/*/data/interim/*
+1/*/data/interim/*
+2/*/data/interim/*
