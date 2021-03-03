@@ -2,5 +2,5 @@
 .DS_Store
 
 # Data files
-1/*/data/interim/*
-2/*/data/interim/*
+derived/*/data/interim/*
+primary/*/data/interim/*

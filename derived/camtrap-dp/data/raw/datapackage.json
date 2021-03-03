@@ -1,7 +1,7 @@
 {
-  "name": "monitoring-faunabeheerzone-8-20201217103450",
-  "id": "47cf949a-2258-4415-901d-f136fb2754e7",
-  "created": "2020-12-17T10:34:50Z",
+  "name": "mica-muskrat-and-coypu-20210302172233",
+  "id": "115f49c1-8603-463e-a908-68de98327266",
+  "created": "2021-03-02T17:22:33Z",
   "profile": "tabular-data-package",
   "sources": [
     {
@@ -11,7 +11,8 @@
     }
   ],
   "project": {
-    "title": "Monitoring Faunabeheerzone 8 ",
+    "title": "MICA - Muskrat and Coypu",
+    "sampling_design": "targeted",
     "sensor_method": [
       "motion detection",
       "time lapse"
@@ -19,10 +20,12 @@
     "animal_types": [
       "unmarked"
     ],
-    "bait_use": "none",
+    "bait_use": [
+      "none"
+    ],
     "classification_level": "sequence",
     "sequence_interval": 120,
-    "_id": "91e1e104-a296-461e-af79-eeb6cb3e6c7f"
+    "_id": "86cabc14-d475-4439-98a7-e7b590bed60e"
   },
   "multimedia_access": {
     "public": true,
@@ -30,143 +33,107 @@
   },
   "organizations": [
     {
-      "title": "INBO",
-      "path": null
+      "title": "INBO"
     }
   ],
   "contributors": [
     {
-      "title": "Alfonso Zuñiga",
-      "role": "contributor",
-      "organization": null
-    },
-    {
-      "title": "Anneleen Rutten",
-      "role": "contributor",
-      "organization": null
+      "title": "Abel De Boer",
+      "role": "contributor"
     },
     {
       "title": "Axel Neukermans",
-      "role": "contributor",
-      "organization": null
+      "role": "author"
     },
     {
-      "title": "Bastiaan De Ketelaere",
-      "role": "contributor",
-      "organization": null
-    },
-    {
-      "title": "Bram Wellekens",
-      "role": "contributor",
-      "organization": null
+      "title": "Björn Matthies",
+      "role": "contributor"
     },
     {
       "title": "Brecht Neukermans",
-      "role": "contributor",
-      "organization": null
+      "role": "author"
+    },
+    {
+      "title": "Claudia Maistrelli",
+      "role": "contributor"
+    },
+    {
+      "title": "Danny Van der beeck",
+      "role": "contributor"
+    },
+    {
+      "title": "Dan Slootmaekers",
+      "role": "contributor"
+    },
+    {
+      "title": "Dennis Donckers",
+      "role": "contributor"
     },
     {
       "title": "Emma Cartuyvels",
-      "role": "contributor",
-      "organization": null
+      "role": "author"
     },
     {
       "title": "Frank Huysentruyt",
-      "role": "contributor",
-      "organization": null
+      "role": "contributor"
     },
     {
-      "title": "Jan Vercammen",
-      "role": "contributor",
-      "organization": null
+      "title": "Friederike Gethöffer",
+      "role": "contributor"
+    },
+    {
+      "title": "Heiko Fritz",
+      "role": "contributor"
+    },
+    {
+      "title": "Jan Lodewijkx",
+      "role": "contributor"
     },
     {
       "title": "Jim Casaer",
-      "role": "maintainer",
-      "organization": null
+      "role": "maintainer"
     },
     {
-      "title": "Jonas Depecker",
-      "role": "contributor",
-      "organization": null
+      "title": "Kurt Schamp",
+      "role": "contributor"
     },
     {
-      "title": "Joris Vernaillen",
-      "role": "contributor",
-      "organization": null
+      "title": "Lilja Fromme",
+      "role": "contributor"
     },
     {
-      "title": "Jurgen Huybrechts",
-      "role": "contributor",
-      "organization": null
+      "title": "Lydia Liebgott",
+      "role": "contributor"
     },
     {
-      "title": "Kathleen Vanhuyse",
-      "role": "contributor",
-      "organization": null
-    },
-    {
-      "title": "louis  Binon",
-      "role": "contributor",
-      "organization": null
-    },
-    {
-      "title": "Lynn Pallemaerts",
-      "role": "contributor",
-      "organization": null
-    },
-    {
-      "title": "Miel Cnuts",
-      "role": "contributor",
-      "organization": null
-    },
-    {
-      "title": "Niko Boone",
-      "role": "contributor",
-      "organization": null
-    },
-    {
-      "title": "Palma Iacobelli",
-      "role": "contributor",
-      "organization": null
-    },
-    {
-      "title": "Sander Devisscher",
-      "role": "contributor",
-      "organization": null
-    },
-    {
-      "title": "Tanja Milotic",
-      "role": "contributor",
-      "organization": null
+      "title": "Peter Desmet",
+      "role": "maintainer"
     },
     {
       "title": "Tim Adriaens",
-      "role": "contributor",
-      "organization": null
-    },
-    {
-      "title": "Willy L. Criegers",
-      "role": "contributor",
-      "organization": null
+      "role": "contributor"
     },
     {
       "title": "Yasmine Verzelen",
-      "role": "contributor",
-      "organization": null
+      "role": "contributor"
+    },
+    {
+      "title": "Yorick Liefting",
+      "role": "maintainer",
+      "organization": "Wageningen University"
     }
   ],
   "temporal": {
-    "start": "2017-06-08",
-    "end": "2020-11-08"
+    "start": "2020-06-30",
+    "end": "2020-06-30"
   },
   "spatial": {
     "type": "Feature",
     "bbox": [
-      4.57344,
-      50.74399,
-      4.74751,
-      50.86361
+      3.51755,
+      50.69905,
+      7.0243,
+      53.27052
     ],
     "properties": {},
     "geometry": {
@@ -174,24 +141,24 @@
       "coordinates": [
         [
           [
-            4.57344,
-            50.74399
+            3.51755,
+            50.69905
           ],
           [
-            4.74751,
-            50.74399
+            7.0243,
+            50.69905
           ],
           [
-            4.74751,
-            50.86361
+            7.0243,
+            53.27052
           ],
           [
-            4.57344,
-            50.86361
+            3.51755,
+            53.27052
           ],
           [
-            4.57344,
-            50.74399
+            3.51755,
+            50.69905
           ]
         ]
       ]
@@ -199,83 +166,47 @@
   },
   "taxonomic": [
     {
-      "taxon_id": "21935204",
-      "scientific_name": "Canis lupus",
-      "vernacular_name": "gray wolf",
-      "count": 1
+      "taxon_id": "11909338",
+      "scientific_name": "Anas platyrhynchos",
+      "vernacular_name": "Mallard",
+      "count": 12007
     },
     {
-      "taxon_id": "21934760",
-      "scientific_name": "Capreolus capreolus",
-      "vernacular_name": "western roe deer",
-      "count": 73
+      "taxon_id": "11910101",
+      "scientific_name": "Gallinula chloropus",
+      "vernacular_name": "Common Moorhen",
+      "count": 2700
     },
     {
-      "taxon_id": "11910549",
-      "scientific_name": "Columba palumbus",
-      "vernacular_name": "Common Wood Pigeon",
-      "count": 1
+      "taxon_id": "21943752",
+      "scientific_name": "Myocastor coypus",
+      "vernacular_name": "Coypu",
+      "count": 980
     },
     {
-      "taxon_id": "11912575",
-      "scientific_name": "Dendrocopos major",
-      "vernacular_name": "Great Spotted Woodpecker",
-      "count": 1
+      "taxon_id": "24565179",
+      "scientific_name": "Ondatra zibethicus",
+      "vernacular_name": "Muskrat",
+      "count": 1715
     },
     {
-      "taxon_id": "21940253",
-      "scientific_name": "Equus caballus",
-      "vernacular_name": "Horse",
-      "count": 10
-    },
-    {
-      "taxon_id": "21939726",
-      "scientific_name": "Erinaceus europaeus",
-      "vernacular_name": "western European hedgehog",
-      "count": 3
-    },
-    {
-      "taxon_id": "21940882",
-      "scientific_name": "Homo sapiens",
-      "vernacular_name": "Human",
-      "count": 3
-    },
-    {
-      "taxon_id": "21940018",
-      "scientific_name": "Lepus europaeus",
-      "vernacular_name": "European Hare",
-      "count": 1
-    },
-    {
-      "taxon_id": "21944579",
-      "scientific_name": "Sciurus vulgaris",
-      "vernacular_name": "Eurasian Red Squirrel",
-      "count": 2
-    },
-    {
-      "taxon_id": "21934875",
-      "scientific_name": "Sus scrofa",
-      "vernacular_name": "wild boar",
-      "count": 72
-    },
-    {
-      "taxon_id": "21935181",
-      "scientific_name": "Vulpes vulpes",
-      "vernacular_name": "Red Fox",
-      "count": 57
+      "taxon_id": "24565921",
+      "scientific_name": "Rattus norvegicus",
+      "vernacular_name": "Norway Rat",
+      "count": 2949
     }
   ],
   "taxon_id_reference": "http://www.catalogueoflife.org/annual-checklist/2016/",
   "_platform_title": "Agouti",
   "_platform_path": "https://agouti.eu",
-  "_platform_package_id": "47cf949a-2258-4415-901d-f136fb2754e7",
+  "_platform_package_id": "115f49c1-8603-463e-a908-68de98327266",
   "resources": [
     {
       "name": "deployments",
       "path": "deployments.csv",
       "profile": "tabular-data-resource",
       "title": "Camera trap deployments",
-      "description": "Table with camera trap deployments. Includes deployment_id, start, end, location and camera setup information.",
+      "description": "Table with camera trap deployments. Includes `deployment_id`, start, end, location and camera setup information.",
       "format": "csv",
       "mediatype": "text/csv",
       "encoding": "utf-8",
@@ -340,8 +271,8 @@
           {
             "name": "start",
             "type": "datetime",
-            "format": "default",
-            "description": "Date and time when the deployment started, as an ISO 8601 formatted string in UTC (e.g. `YYYY-MM-DDThh:mm:ssZ`).",
+            "format": "%Y-%m-%dT%H:%M:%S%z",
+            "description": "Date and time when the deployment started, as an ISO 8601 formatted string with timezone designator (`YYYY-MM-DDThh:mm:ssZ` or `YYYY-MM-DDThh:mm:ss±hh:mm`).",
             "example": "2020-03-01T22:00:00Z",
             "constraints": {
               "required": true
@@ -350,8 +281,8 @@
           {
             "name": "end",
             "type": "datetime",
-            "format": "default",
-            "description": "Date and time when the deployment ended, as an ISO 8601 formatted string in UTC (e.g. `YYYY-MM-DDThh:mm:ssZ`).",
+            "format": "%Y-%m-%dT%H:%M:%S%z",
+            "description": "Date and time when the deployment ended, as an ISO 8601 formatted string with timezone designator (`YYYY-MM-DDThh:mm:ssZ` or `YYYY-MM-DDThh:mm:ss±hh:mm`).",
             "example": "2020-04-01T22:00:00Z",
             "constraints": {
               "required": true
@@ -491,7 +422,7 @@
       "path": "multimedia.csv",
       "profile": "tabular-data-resource",
       "title": "Camera trap multimedia",
-      "description": "Table with multimedia files (images/videos) captured by the camera traps. Associated with deployments (deployment_id) and organized in sequences (sequence_id). Includes timestamp and file path.",
+      "description": "Table with multimedia files (images/videos) captured by the camera traps. Associated with deployments (`deployment_id`) and organized in sequences (`sequence_id`). Includes timestamp and file path.",
       "format": "csv",
       "mediatype": "text/csv",
       "encoding": "utf-8",
@@ -531,8 +462,8 @@
           {
             "name": "timestamp",
             "type": "datetime",
-            "format": "default",
-            "description": "Date and time when the multimedia file was recorded, as an ISO 8601 formatted string in UTC (e.g. `YYYY-MM-DDThh:mm:ssZ`).",
+            "format": "%Y-%m-%dT%H:%M:%S%z",
+            "description": "Date and time when the multimedia file was recorded, as an ISO 8601 formatted string with timezone designator (`YYYY-MM-DDThh:mm:ssZ` or `YYYY-MM-DDThh:mm:ss±hh:mm`).",
             "example": "2020-03-24T11:21:46Z",
             "constraints": {
               "required": true
@@ -605,7 +536,7 @@
       "path": "observations.csv",
       "profile": "tabular-data-resource",
       "title": "Camera trap observations",
-      "description": "Table with observations based on the multimedia files. Associated with deployments (deployment_id) and based on single multimedia files (multimedia_id) or sequences of multimedia files (sequence_id). Observations can mark non-animal events (camera setup, human, empty) or species observations (observation_type = animal), with multiple observations for groups of certain count, age, sex, behaviour and/or individuals.",
+      "description": "Table with observations based on the multimedia files. Associated with deployments (`deployment_id`), sequences (`sequence_id`) and optionally individual multimedia files (`multimedia_id`). Observations can mark non-animal events (camera setup, human, empty) or one or more animal observations (`observation_type` = `animal`) of a certain species, count, age, sex, behaviour and/or individual.",
       "format": "csv",
       "mediatype": "text/csv",
       "encoding": "utf-8",
@@ -655,8 +586,8 @@
           {
             "name": "timestamp",
             "type": "datetime",
-            "format": "default",
-            "description": "Date and time of the observation, as an ISO 8601 formatted string in UTC (e.g. `YYYY-MM-DDThh:mm:ssZ`). For file-based observations this is the `timestamp` of the associated multimedia file (in `multimedia_id`), for sequence-based observations the `timestamp` of the first multimedia file in the associated sequence (in `sequence_id`).",
+            "format": "%Y-%m-%dT%H:%M:%S%z",
+            "description": "Date and time of the observation, as an ISO 8601 formatted string with timezone designator (`YYYY-MM-DDThh:mm:ssZ` or `YYYY-MM-DDThh:mm:ss±hh:mm`). For file-based observations this is the `timestamp` of the associated multimedia file (in `multimedia_id`), for sequence-based observations the `timestamp` of the first multimedia file in the associated sequence (in `sequence_id`).",
             "example": "2020-03-24T11:21:46Z",
             "constraints": {
               "required": true
@@ -719,17 +650,7 @@
             "type": "string",
             "format": "default",
             "description": "Common name of the observed individual(s), preferably in English.",
-            "example": "Wolf",
-            "constraints": {
-              "required": false
-            }
-          },
-          {
-            "name": "is_domesticated",
-            "type": "boolean",
-            "format": "default",
-            "description": "`true` if the observed individual(s) are domesticated.",
-            "example": "false",
+            "example": "wolf",
             "constraints": {
               "required": false
             }
@@ -825,10 +746,10 @@
             }
           },
           {
-            "name": "classification_date",
+            "name": "classification_timestamp",
             "type": "datetime",
-            "format": "default",
-            "description": "Date and time when this classification was made, as an ISO 8601 formatted string in UTC (e.g. `YYYY-MM-DDThh:mm:ssZ`).",
+            "format": "%Y-%m-%dT%H:%M:%S%z",
+            "description": "Date and time of the classification, as an ISO 8601 formatted string with timezone designator (`YYYY-MM-DDThh:mm:ssZ` or `YYYY-MM-DDThh:mm:ss±hh:mm`).",
             "example": "2020-08-22T10:25:19Z",
             "constraints": {
               "required": false
