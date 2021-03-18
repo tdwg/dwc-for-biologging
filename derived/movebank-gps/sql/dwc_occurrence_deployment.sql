@@ -81,7 +81,8 @@ SELECT
 -- collectionID
 -- datasetID                            Only available in dataset metadata
 -- institutionCode
--- collectionCode
+-- collectionCode                       FIXED VALUE
+  'Movebank' AS "collectionCode",
 -- datasetName
   gps."study-name" AS "datasetName",
 -- ownerInstitutionCode
