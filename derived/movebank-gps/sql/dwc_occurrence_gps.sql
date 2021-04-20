@@ -243,7 +243,7 @@ FROM
     -- Group by date+hour
       STRFTIME('%Y-%m-%dT%H', "timestamp")
     HAVING
-    -- Take first record within group. timestamps are assumed to be ordered chronologically
+    -- Take first record within group, i.e. first timestamp (https://github.com/tdwg/dwc-for-biologging/issues/31)
       ROWID = MIN(ROWID)
   ) AS gps
 
