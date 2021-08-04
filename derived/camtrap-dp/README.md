@@ -1,6 +1,6 @@
 # Camera trap data
 
-Lossy transformation to Darwin Core of camera trap data formatted as a [Camera Trap Data Package](https://gitlab.com/oscf/camtrap-dp), to enable indexing by GBIF/OBIS.
+Lossy transformation to Darwin Core of camera trap data formatted as a [Camera Trap Data Package](https://tdwg.github.io/camtrap-dp/), to enable indexing by GBIF/OBIS.
 
 ## Transformation
 
@@ -51,9 +51,9 @@ sqlite> .read sql/dwc_multimedia.sql
 
 ## Example dataset
 
-_MICA - Muskrat and Coypu_ is a camera trap dataset created by the [Research Institute for Nature and Forest (INBO)](https://www.inbo.be/en). It contains deployments, media and observations data formatted as a [Camtrap DP](https://gitlab.com/oscf/camtrap-dp) and a small sample is [deposited in this repository](data/raw).
+_MICA - Muskrat and Coypu_ is a camera trap dataset created by the [Research Institute for Nature and Forest (INBO)](https://www.inbo.be/en) and published on Zenodo (Cartuyvels et al. 2021, https://doi.org/10.5281/zenodo.4893243). It contains deployments, media and observations data formatted as a [Camtrap DP](https://tdwg.github.io/camtrap-dp/). A small sample of the dataset is [deposited in this repository](data/raw) to showcase the transformation.
 
-- [`datapackage.json`](data/raw/datapackage.json): describes the dataset and follows the [Camtrap DP schema](https://gitlab.com/oscf/camtrap-package-schemas/-/blob/master/camtrap-package-profile.json).
+- [`datapackage.json`](data/raw/datapackage.json): describes the dataset and follows the [Camtrap DP metadata schema](https://tdwg.github.io/camtrap-dp/metadata/).
 - [data/processed](data/processed): resulting Darwin Core data.
 
 This dataset is published to GBIF at <https://doi.org/10.15468/5tb6ze>. It uses the conversion presented above, to then add/change some Darwin Core terms in [this R Markdown script](https://github.com/inbo/mica-occurrences/blob/master/datasets/mica-agouti-occurrences/src/dwc_mapping.Rmd).
