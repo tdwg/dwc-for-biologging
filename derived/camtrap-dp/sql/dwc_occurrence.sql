@@ -16,10 +16,11 @@ end                                     N: observation timestamp is used instead
 setup_by                                N
 camera_id                               N
 camera_model                            N
-camera_timestamp                        N
 camera_interval                         N
 camera_height                           N
-camera_angle                            N
+camera_tilt                             N
+camera_heading                          N
+timestamp_issues                        N
 bait_use                                Y
 session                                 N: sessions events (grouping deployments) are not retained
 array                                   N
@@ -40,7 +41,7 @@ observation_type                        Y: as filter
 sensor_method                           Y
 camera_setup                            N
 scientific_name                         Y
-vernacular_name                         Y
+taxon_id                                Y
 count                                   Y
 count_new                               N: difficult to express
 age                                     Y
@@ -237,7 +238,8 @@ SELECT
 -- typeStatus
 
 -- TAXON
--- taxonID
+-- taxonID                              The refence for the taxon_ids is only available in dataset metadata
+  obs."taxon_id" AS "taxonID",
 -- scientificNameID
 -- acceptedNameUsageID
 -- parentNameUsageID
@@ -255,7 +257,7 @@ SELECT
 -- namePublishedInYear
 -- higherClassification
 -- kingdom                              FIXED VALUE: in almost all use cases, it is safe to assume all observations are animals, see https://gitlab.com/oscf/camtrap-dp/-/issues/67
-  'Animalia' AS "kingdom",
+  'Animalia' AS "kingdom"
 -- phylum
 -- class
 -- order
@@ -264,11 +266,10 @@ SELECT
 -- subgenus
 -- specificEpithet
 -- infraspecificEpithet
--- taxonRank                            Not in source data: could be species or subspecies
+-- taxonRank                            Only available in dataset metadata
 -- verbatimTaxonRank
 -- scientificNameAuthorship
--- vernacularName
-  obs."vernacular_name" AS "vernacularName"
+-- vernacularName                       Only available in dataset metadata
 -- nomenclaturalCode
 -- taxonomicStatus
 -- nomenclaturalStatus

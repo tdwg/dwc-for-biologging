@@ -14,6 +14,7 @@ file_path                               Y
 file_name                               N
 file_mediatype                          Y
 exif_data                               N
+favourite                               N
 comments                                N
 _id                                     N
 

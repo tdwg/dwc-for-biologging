@@ -1,8 +1,8 @@
 {
-  "name": "mica-muskrat-and-coypu-20210302172233",
-  "id": "115f49c1-8603-463e-a908-68de98327266",
-  "created": "2021-03-02T17:22:33Z",
-  "profile": "tabular-data-package",
+  "name": "mica-muskrat-and-coypu-20210707160815",
+  "id": "https://doi.org/10.5281/zenodo.4893244",
+  "created": "2021-07-07T16:08:15Z",
+  "profile": "https://raw.githubusercontent.com/tdwg/camtrap-dp/0.1.4/camtrap-dp-profile.json",
   "sources": [
     {
       "title": "Agouti",
@@ -12,6 +12,7 @@
   ],
   "project": {
     "title": "MICA - Muskrat and Coypu",
+    "description": "This project is part of the LIFE project MICA, in which innovative techniques are tested for a more efficient control of muskrat and coypu populations, both invasive species. Camera traps were located in areas where the presence of muskrat and/or coypu was suspected.",
     "sampling_design": "targeted",
     "sensor_method": [
       "motion detection",
@@ -19,9 +20,6 @@
     ],
     "animal_types": [
       "unmarked"
-    ],
-    "bait_use": [
-      "none"
     ],
     "classification_level": "sequence",
     "sequence_interval": 120,
@@ -33,99 +31,130 @@
   },
   "organizations": [
     {
-      "title": "INBO"
+      "title": "Research Institute for Nature and Forest (INBO)",
+      "path": "https://inbo.be"
     }
   ],
   "contributors": [
     {
       "title": "Abel De Boer",
+      "email": "adeboer@wetterskipfryslan.nl",
       "role": "contributor"
     },
     {
       "title": "Axel Neukermans",
-      "role": "author"
+      "email": "axel.neukermans@inbo.be",
+      "role": "author",
+      "organization": "Research Institute for Nature and Forest (INBO)"
     },
     {
       "title": "Björn Matthies",
+      "email": "bjoern.matthies@lwk-niedersachsen.de",
       "role": "contributor"
     },
     {
       "title": "Brecht Neukermans",
-      "role": "author"
+      "email": "brecht.neukermans@inbo.be",
+      "role": "author",
+      "organization": "Research Institute for Nature and Forest (INBO)"
     },
     {
       "title": "Claudia Maistrelli",
+      "email": "claudia.maistrelli@tiho-hannover.de",
       "role": "contributor"
     },
     {
       "title": "Danny Van der beeck",
+      "email": "daniel.vanderbeeck@gmail.com",
       "role": "contributor"
     },
     {
       "title": "Dan Slootmaekers",
+      "email": "d.slootmaekers@vmm.be",
       "role": "contributor"
     },
     {
       "title": "Dennis Donckers",
+      "email": "dennis.donckers2@telenet.be",
       "role": "contributor"
     },
     {
       "title": "Emma Cartuyvels",
-      "role": "author"
+      "email": "emma.cartuyvels@inbo.be",
+      "role": "author",
+      "organization": "Research Institute for Nature and Forest (INBO)"
     },
     {
       "title": "Frank Huysentruyt",
-      "role": "contributor"
+      "email": "frank.huysentruyt@inbo.be",
+      "role": "contributor",
+      "organization": "Research Institute for Nature and Forest (INBO)"
     },
     {
       "title": "Friederike Gethöffer",
+      "email": "friederike.gethoeffer@tiho-hannover.de",
       "role": "contributor"
     },
     {
       "title": "Heiko Fritz",
+      "email": "foersterheiko@gmx.de",
       "role": "contributor"
     },
     {
       "title": "Jan Lodewijkx",
+      "email": "j.lodewijkx@vmm.be",
       "role": "contributor"
     },
     {
       "title": "Jim Casaer",
-      "role": "maintainer"
+      "email": "jim.casaer@inbo.be",
+      "role": "maintainer",
+      "organization": "Research Institute for Nature and Forest (INBO)"
     },
     {
       "title": "Kurt Schamp",
+      "email": "kurt.schamp@inbo.be",
       "role": "contributor"
     },
     {
       "title": "Lilja Fromme",
+      "email": "lilja.fromme@tiho-hannover.de",
       "role": "contributor"
     },
     {
       "title": "Lydia Liebgott",
+      "email": "lydia.liebgott@tiho-hannover.de",
       "role": "contributor"
     },
     {
       "title": "Peter Desmet",
-      "role": "maintainer"
+      "email": "peter.desmet@inbo.be",
+      "path": "https://orcid.org/0000-0002-8442-8025",
+      "role": "maintainer",
+      "organization": "Research Institute for Nature and Forest (INBO)"
     },
     {
       "title": "Tim Adriaens",
-      "role": "contributor"
+      "email": "tim.adriaens@inbo.be",
+      "role": "contributor",
+      "organization": "Research Institute for Nature and Forest (INBO)"
     },
     {
       "title": "Yasmine Verzelen",
-      "role": "contributor"
+      "email": "yasmine.verzelen@inbo.be",
+      "role": "contributor",
+      "organization": "Research Institute for Nature and Forest (INBO)"
     },
     {
       "title": "Yorick Liefting",
+      "email": "yorick.liefting@wur.nl",
       "role": "maintainer",
       "organization": "Wageningen University"
     }
   ],
   "temporal": {
-    "start": "2020-06-30",
-    "end": "2020-06-30"
+    "start": "2020-06-03",
+    "end": "2020-06-03"
   },
   "spatial": {
     "type": "Feature",
@@ -166,40 +195,52 @@
   },
   "taxonomic": [
     {
-      "taxon_id": "11909338",
+      "taxon_id": "DGP6",
       "scientific_name": "Anas platyrhynchos",
-      "vernacular_name": "Mallard",
-      "count": 12007
+      "vernacular_names": {
+        "en": "mallard",
+        "nl": "wilde eend"
+      }
     },
     {
-      "taxon_id": "11910101",
+      "taxon_id": "3F6VX",
       "scientific_name": "Gallinula chloropus",
-      "vernacular_name": "Common Moorhen",
-      "count": 2700
+      "vernacular_names": {
+        "en": "common moorhen",
+        "nl": "waterhoen"
+      }
     },
     {
-      "taxon_id": "21943752",
+      "taxon_id": "6RRQT",
       "scientific_name": "Myocastor coypus",
-      "vernacular_name": "Coypu",
-      "count": 980
+      "vernacular_names": {
+        "en": "coypu",
+        "nl": "beverrat"
+      }
     },
     {
-      "taxon_id": "24565179",
+      "taxon_id": "49JSC",
       "scientific_name": "Ondatra zibethicus",
-      "vernacular_name": "Muskrat",
-      "count": 1715
+      "vernacular_names": {
+        "en": "muskrat",
+        "nl": "muskusrat"
+      }
     },
     {
-      "taxon_id": "24565921",
+      "taxon_id": "4RM67",
       "scientific_name": "Rattus norvegicus",
-      "vernacular_name": "Norway Rat",
-      "count": 2949
+      "vernacular_names": {
+        "en": "brown rat",
+        "nl": "bruine rat"
+      }
     }
   ],
-  "taxon_id_reference": "http://www.catalogueoflife.org/annual-checklist/2016/",
-  "_platform_title": "Agouti",
-  "_platform_path": "https://agouti.eu",
-  "_platform_package_id": "115f49c1-8603-463e-a908-68de98327266",
+  "taxon_id_reference": "https://www.catalogueoflife.org",
+  "platform": {
+    "title": "Agouti",
+    "path": "https://agouti.eu",
+    "package_id": "3bdce07e-f0b1-4566-948a-e1f0a0d0a214"
+  },
   "resources": [
     {
       "name": "deployments",
@@ -211,12 +252,13 @@
       "mediatype": "text/csv",
       "encoding": "utf-8",
       "schema": {
+        "title": "Deployments",
+        "description": "Table with camera trap deployments. Includes `deployment_id`, start, end, location and camera setup information.",
         "fields": [
           {
             "name": "deployment_id",
             "type": "string",
             "format": "default",
-            "title": "Deployment ID",
             "description": "Unique identifier (within a project) of the deployment.",
             "example": "dep1",
             "constraints": {
@@ -334,9 +376,9 @@
           },
           {
             "name": "camera_height",
-            "type": "integer",
-            "description": "An approximate height at which the camera was deployed. Specified in centimeters.",
-            "example": "100",
+            "type": "number",
+            "description": "An approximate height at which the camera was deployed. Specified in meters.",
+            "example": "1.2",
             "constraints": {
               "required": false,
               "minimum": 0
@@ -393,7 +435,7 @@
             "type": "string",
             "format": "default",
             "description": "User defined tags associated with the deployment, as a pipe (`|`) separated list.",
-            "example": "Outsite NP | Forest edge",
+            "example": "Outside NP | Forest edge",
             "constraints": {
               "required": false
             }
@@ -427,6 +469,8 @@
       "mediatype": "text/csv",
       "encoding": "utf-8",
       "schema": {
+        "title": "Multimedia",
+        "description": "Table with multimedia files (images/videos) captured by the camera traps. Associated with deployments (`deployment_id`) and organized in sequences (`sequence_id`). Includes timestamp and file path.",
         "fields": [
           {
             "name": "multimedia_id",
@@ -541,6 +585,8 @@
       "mediatype": "text/csv",
       "encoding": "utf-8",
       "schema": {
+        "title": "Observations",
+        "description": "Table with observations based on the multimedia files. Associated with deployments (`deployment_id`), sequences (`sequence_id`) and optionally individual multimedia files (`multimedia_id`). Observations can mark non-animal events (camera setup, human, empty) or one or more animal observations (`observation_type` = `animal`) of a certain taxon, count, age, sex, behaviour and/or individual.",
         "fields": [
           {
             "name": "observation_id",
@@ -646,11 +692,11 @@
             }
           },
           {
-            "name": "vernacular_name",
+            "name": "taxon_id",
             "type": "string",
             "format": "default",
-            "description": "Common name of the observed individual(s), preferably in English.",
-            "example": "wolf",
+            "description": "Unique identifier of the `scientific_name` according to the taxonomic reference list defined by `taxon_id_reference` in the package metadata.",
+            "example": "QLXL",
             "constraints": {
               "required": false
             }
@@ -702,7 +748,7 @@
             "name": "behaviour",
             "type": "string",
             "format": "default",
-            "description": "Dominant behaviour of observed individual(s), ideally expressed as controlled values (e.g. grazing, browsing, rooting, vigilance, running, walking). A combination of dominant (first) and additional behaviours can be expressed as as a pipe (|) separated list.",
+            "description": "Dominant behaviour of observed individual(s), ideally expressed as controlled values (e.g. grazing, browsing, rooting, vigilance, running, walking). A combination of dominant (first) and additional behaviours can be expressed as as a pipe (`|`) separated list.",
             "example": "vigilance",
             "constraints": {
               "required": false
