@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository contains guidelines for expressing biologging data (e.g. acoustic telemetry, GPS tracking) in Darwin Core. It is lead by the Data Standardization Working Group of the [International Bio-Logging Society (IBLS)](https://www.bio-logging.net), in collaboration with IODE/OBIS, which funded [a workshop on animal tagging and tracking, 23-26 April 2018, Oostende, Belgium](http://iobis.org/2018/05/18/att/). **The guidelines are a work in progress and not (yet) a TDWG recommendation**.
+This repository contains guidelines for expressing biologging data (e.g. acoustic telemetry, GPS tracking) in Darwin Core. It is lead by the Data Standardization Working Group of the [International Bio-Logging Society (IBLS)](https://www.bio-logging.net), in collaboration with IODE/OBIS, which funded [a workshop on animal tagging and tracking, 23-26 April 2018, Oostende, Belgium](http://obis.org/2018/05/18/att/). **The guidelines are a work in progress and not (yet) a TDWG recommendation**.
 
 ## :question: Have Questions? Want to Help? :question:
 * See the "issues" tab above to help review questions that are being addressed and to ask new ones.
